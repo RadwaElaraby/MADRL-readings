@@ -37,6 +37,9 @@ Revisiting the master-slave architecture in multi-agent deep reinforcement learn
 
 
 
+
+
+
 Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
 
 Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
