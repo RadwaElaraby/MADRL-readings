@@ -38,7 +38,10 @@ They developed 2 methods:
 
 * Differentiable Inter-Agent Learning (DIAL):
 ** gradients can be pushed through the communication channel, yielding a system that is end-to-end trainable even across agents.
-
+- Bullet list
+          - Nested bullet
+                  - Sub-nested bullet etc
+          - Bullet list item 2 
 
 They followed a centralized training decentralized execution paradigm. 
 
