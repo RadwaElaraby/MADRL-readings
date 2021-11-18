@@ -37,7 +37,7 @@ They developed 2 methods:
 - Reinforced Inter-Agent Learning (RIAL):  
   - agents use two deep Q networks Q<sup>a</sup><sub>u</sub>(o<sup>a</sup><sub>t</sub>, m<sup>a'</sup><sub>t-1</sub>, h<sup>a</sup><sub>t-1</sub>, u<sup>a</sup>) and Q<sub>m</sub>(.) to predict Q-values for environment and communication actions respectively, where:
     - o<sup>a</sup><sub>t</sub> is the agent's local observation, 
-    - m<sub>t-1</sub><sup>a'</sup> are messages from other agents,
+    - m<sup>a'</sup><sub>t-1</sub> are messages from other agents,
     - h<sup>a</sup><sub>t-1</sub> is the hidden state (recurrent neural network)
   - an action selector is used to pick u<sup>a</sup><sub>t</sub> and m<sup>a</sup><sub>t</sub> from Q<sub>u</sub> and Q<sub>m</sub>, using an \epsilon-greedy policy.
   - end-to-end trainable within an agent (no gradients are passed between agents)
