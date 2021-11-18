@@ -25,24 +25,18 @@
 
 
 ---
-### Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
+## Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
 
 Settings: fully cooperative, partially observable
 
 Approach: they use a deep Q network
 
 They developed 2 methods:
-- Reinforced Inter-Agent Learning (RIAL):  
+1. Reinforced Inter-Agent Learning (RIAL):  
+  1. end-to-end trainable within an agent (no gradients are passed between agents).
+  2. trains two deep Q networks Q<sub>u</sub><sup>a</sup>(o<sub>t</sub><sup>a</sup>, m<sub>t-1</sub><sup>a'</sup>, h<sub>t-1</sub><sup>a</sup>, u<sup>a</sup>) and Q<sub>m</sub>(.) for actions and communication actions respectively, where o<sub>t</sub><sup>a</sup> is the agent's local observation, m<sub>t-1</sub><sup>a'</sup> is the received message from the previou
 
-end-to-end trainable within an agent (no gradients are passed between agents).
-
-two deep Q networks Q<sub>u</sub><sup>a</sup>(o<sub>t</sub><sup>a</sup>, m<sub>t-1</sub><sup>a'</sup>, h<sub>t-1</sub><sup>a</sup>, u<sup>a</sup>) and Q<sub>m</sub>(.) for actions and communication actions respectively, where 
-
-o<sub>t</sub><sup>a</sup> is the agent's local observation, 
-
-m<sub>t-1</sub><sup>a'</sup> is the received message from the previou
-
-- Differentiable Inter-Agent Learning (DIAL):
+2. Differentiable Inter-Agent Learning (DIAL):
 gradients can be pushed through the communication channel, yielding a system that is end-to-end trainable even across agents.
 
 
