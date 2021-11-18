@@ -29,11 +29,7 @@
 
 Goal: learn communication protocols among agents in a fully cooperative, partially observable settings
 
-Approach: they use a deep Q network
-
-oat,ma′t−1,hat−1,uat−1,mat−1,a,ua
-
-They developed 2 methods:
+Approach: they developed 2 methods:
 - Reinforced Inter-Agent Learning (RIAL):  
   - agents use two deep Q networks Q<sup>a</sup><sub>u</sub>(o<sup>a</sup><sub>t</sub>, m<sup>a'</sup><sub>t-1</sub>, h<sup>a</sup><sub>t-1</sub>, u<sup>a</sup>) and Q<sub>m</sub>(.) to predict Q-values for environment and communication actions respectively, where:
     - o<sup>a</sup><sub>t</sub> is the agent's local observation, 
