@@ -69,8 +69,8 @@ Goal:
 
 Description: 
 - learns a single controller **Φ** that maps agents' states **s = {s<sub>1</sub>, ..., s<sub>J</sub>}** into their actions **a = {a<sub>1</sub>, ..., a<sub>J</sub>}** where **J** is the number of agents
-- **Φ** consists of individual modules f<sup>i</sup>(h<sup>i</sup><sub>j</sub>, c<sup>i</sup><sub>j</sub>) for each agent.
-- each module takes the hidden state **h<sup>i</sup><sub>j</sub>** and the communication c<sup>i</sup><sub>j</sub> and outputs the next hidden state **h<sup>i+1</sup><sub>j</sub>**
+- **Φ** consists of individual modules **f<sup>i</sup>** where i refers to the communication step
+- each module **f** takes two input vectors for each agent **j**: the hidden state **h<sup>i</sup><sub>j</sub>** and the communication **c<sup>i</sup><sub>j</sub>** and outputs a vector **h<sup>i+1</sup><sub>j</sub>**
 
 
 ![](imgs/sukhbaatar16_commNet.PNG)
