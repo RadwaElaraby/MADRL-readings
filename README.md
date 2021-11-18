@@ -48,7 +48,7 @@ Approach: they developed 2 methods:
   - gradients can be pushed through the communication channel, yielding a system that is end-to-end trainable even across agents
   - gradient chains are based on both the DQN loss and the backpropagated error from the recipient of the message to the sender
 
-![](imgs/Foerster16_rial_dial.PNG)
+![](imgs/foerster16_rial_dial.PNG)
 
 
 They followed a centralized training decentralized execution paradigm. 
@@ -61,6 +61,12 @@ Centralized training is achieved via:
 
 
 ### Learning multiagent communication with backpropagation. (Sukhbaatar et al., 2016).
+
+learn 
+
+![](imgs/sukhbaatar16_commNet.PNG)
+
+---
 
 ### Multiagent bidirectionally-coordinated nets: Emergence of human-level coordination in learning to play starcraft combat games. (Peng et al., 2017)
 
