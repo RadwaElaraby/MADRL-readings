@@ -73,18 +73,6 @@ class CommNet(nn.Module):
 
         self.agent_ids = None # placeholder for forward
 
-        # Comm -> hidden
-        if self.opts['comm_encoder']:
-            # before merging comm and hidden, use a linear layer for comm
-            if self.use_lstm: # LSTM has 4x weights for gates
-                self._comm2hid_linear_lstm = LinearMulti(self.nmodels, self.hidsz, self.hidsz * 4)
-                if self.opts['comm_zero_init']:
-                    self._comm2hid_linear_lstm.init_zero()
-            else:
-                self._comm2hid_linear = LinearMulti(self.nmodels, self.hidsz, self.hidsz)
-                if self.opts['comm_zero_init']:
-                    self._comm2hid_linear.init_zero()
-
         # RNN: (comm + hidden) -> hidden
         if self.use_lstm:
             self._lstm_enc = self.__build_encoder(self.hidsz * 4)
@@ -104,9 +92,6 @@ class CommNet(nn.Module):
         # Comm_out
         self._comm_out_linear = LinearMulti(self.nmodels, self.hidsz, self.hidsz * self.nagents)
         self._comm_out_linear.init_zero()
-        if self.opts['comm_decoder'] >= 1:
-            self._comm_out_linear_alt = LinearMulti(self.nmodels, self.hidsz, self.hidsz)
-            self._comm_out_linear_alt.init_zero()
 
         # action_comm
         nactions_comm = self.opts['nactions_comm']
@@ -167,11 +152,6 @@ class CommNet(nn.Module):
         # Lua Sum(2) -> Python sum(1)
         # [batch x nagents, nagents, hidsz] -> [batch x nagents, hidsz]
         comm_ = torch.sum(comm_in, 1)
-        if self.opts['comm_encoder']:
-            if self.use_lstm:
-                comm_ = self._comm2hid_linear_lstm(comm_, self.agent_ids)
-            else:
-                comm_ = self._comm2hid_linear(comm_, self.agent_ids)
         return comm_
 
     def __hid2hid(self, inp, comm_, prev_hid, prev_cell):
@@ -238,10 +218,6 @@ class CommNet(nn.Module):
             return comm_out
         else:
             comm_out = hidstate
-            if self.opts['comm_decoder'] >= 1:
-                comm_out = self._comm_out_linear_alt(comm_out, self.agent_ids) # hidsz -> hidsz
-                if self.opts['comm_decoder'] == 2:
-                    comm_out = self.__nonlin()(comm_out)
             comm_out = comm_out.repeat(self.nagents, 1) # hidsz -> 2 x hidsz # original: comm_out = nn.Contiguous()(nn.Replicate(self.nagents, 2)(comm_out))
         return comm_out
 
