@@ -27,13 +27,15 @@
 ---
 ## Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
 
-Settings & Goal: 
+Goal: 
 - learn a discrete communication signal among agents in a fully cooperative, partially observable settings.
+
+Description:
 - at each timestep t, each agent receives a local observation **o<sub>t</sub>** and discrete message signals from other agents **m<sub>t-1</sub>**
 - then, it should take an environment action **u<sub>t</sub>** and a communication action **m<sub>t</sub>** 
 - the communication action is sent to other agents via a communication channel. 
 
-Approach: they developed 2 methods:
+Method: 
 - Reinforced Inter-Agent Learning (RIAL):  
   - agents use two deep Q networks **Q<sup>a</sup><sub>u</sub>(o<sup>a</sup><sub>t</sub>, m<sup>a'</sup><sub>t-1</sub>, h<sup>a</sup><sub>t-1</sub>, u<sup>a</sup>)** and **Q<sub>m</sub>(.)** to predict Q-values for environment and communication actions respectively, where:
     - **o<sup>a</sup><sub>t</sub>** is the agent's local observation, 
@@ -62,13 +64,14 @@ Centralized training is achieved via:
 
 ### Learning multiagent communication with backpropagation. (Sukhbaatar et al., 2016).
 
+Goal:
+- coordination between agents in fully cooperative, partially observable settings by learning suitable communication between them
 
-Settings & Goal:  
-- fully cooperative, partially observable settings  
-- learns a policy network that maps states of agents into action probablities 
+Description: 
+- learns a single controller **Φ** that maps the states of **J** agents **s = {s<sub>1</sub>, ..., s<sub>J</sub>}** into their action probabilities **a = {a<sub>1</sub>, ..., a<sub>J</sub>}**
 
-Approach:
-- learns a single controller Φ that encompases both the individual controllers for each agent and the communication between them.
+Method:
+- Φ that encompases both the individual controllers for each agent and the communication between them.
 - the controller maps the states of all agents into their action probablities 
 - the controller consists of modules f<sup>i</sup>(h<sup>i</sup><sub>j</sub>, c<sup>i</sup><sub>j</sub>) where each module takes 
 
