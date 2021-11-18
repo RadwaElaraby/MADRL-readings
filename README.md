@@ -62,7 +62,15 @@ Centralized training is achieved via:
 
 ### Learning multiagent communication with backpropagation. (Sukhbaatar et al., 2016).
 
-learn 
+
+Settings & Goal:  
+- fully cooperative, partially observable settings  
+- learns a policy network that maps states of agents into action probablities 
+
+Approach:
+- learns a single controller Φ that encompases both the individual controllers for each agent and the communication between them.
+- the controller maps the states of all agents into their action probablities 
+- the controller consists of modules f<sup>i</sup>(h<sup>i</sup><sub>j</sub>, c<sup>i</sup><sub>j</sub>) where each module takes 
 
 ![](imgs/sukhbaatar16_commNet.PNG)
 
