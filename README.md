@@ -76,13 +76,16 @@ Description:
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;h^{i+1}_j=\sigma(H^i*h^i_j%20+%20C^i*c^i_j)" />
 
 
-- the output vectors **h<sup>i+1</sup>** are then averaged according to the following formula to compute the communication for the next step **c<sup>i+1</sup><sub>j</sub>**
+- the hidden vectors **h<sup>i+1</sup>** from agents are then averaged according to the following formula to compute the communication for the next step **c<sup>i+1</sup><sub>j</sub>**
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j%27\neq%20j}{h^{i+1}_{j%27}}"  />
 
-- agents are allowed to communicate to others within a certain range by using a mask
+- the hidden vectors **h<sup>i</sup>** are also used to generate a distribution over the space of actions at the output layer
 
 ![](imgs/sukhbaatar16_commNet.PNG)
+
+- a mask could be used to choose a certain range of agents to communicate with instead of broadcasting to all agents
+
 
 ---
 
