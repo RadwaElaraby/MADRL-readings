@@ -27,7 +27,9 @@
 ---
 ## Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
 
-Goal: learn communication protocols among agents in a fully cooperative, partially observable settings
+Settings & Goal: 
+- learn discrete communication protocols among agents in a fully cooperative, partially observable settings
+- At each timestep, agents are allowed to take an environment action which affects the environment, and send a discrete communication signal to other agents via a communication channel. Agents should then use their local observation accompanied with the messages from other agents to select their actions.
 
 Approach: they developed 2 methods:
 - Reinforced Inter-Agent Learning (RIAL):  
