@@ -37,7 +37,7 @@ Approach: they developed 2 methods:
     - **o<sup>a</sup><sub>t</sub>** is the agent's local observation, 
     - **m<sup>a'</sup><sub>t-1</sub>** are messages from other agents,
     - **h<sup>a</sup><sub>t-1</sub>** is the hidden state (recurrent neural network)
-  - the Q values are then passed to an action selector unit to pick u<sup>a</sup><sub>t</sub> and m<sup>a</sup><sub>t</sub> (using an ε-greedy policy).
+  - the Q values are then passed to an action selector unit to pick **u<sup>a</sup><sub>t</sub>** and **m<sup>a</sup><sub>t</sub>** (using an ε-greedy policy).
   - it's end-to-end trainable within an agent (no gradients are passed between agents)
   - gradient chains are based on the DQN loss
 
@@ -46,14 +46,14 @@ Approach: they developed 2 methods:
   - gradients can be pushed through the communication channel, yielding a system that is end-to-end trainable even across agents
   - gradient chains are based on both the DQN loss and the backpropagated error from the recipient of the message to the sender
 
+![](imgs/Foerster16_rial_dial.PNG)
+
+
 They followed a centralized training decentralized execution paradigm. 
 
 Centralized training is achieved via:
 - parameter sharing (learning a single network) in RIAL.
 - parameter sharing and pushing gradients across agents through the communication channel in DIAL.
-
-![](imgs/Foerster16_rial_dial.PNG)
-
 
 ---
 
