@@ -72,15 +72,13 @@ Description:
 - learns a single controller **Φ** that maps agents' states **s = {s<sub>1</sub>, ..., s<sub>J</sub>}** into their actions **a = {a<sub>1</sub>, ..., a<sub>J</sub>}** where **J** is the number of agents
 - **Φ** consists of individual modules **f<sup>i</sup>** where i refers to the communication step
 - each module **f** takes two input vectors for each agent **j**: the hidden state **h<sup>i</sup><sub>j</sub>** and the communication **c<sup>i</sup><sub>j</sub>** and outputs a vector **h<sup>i+1</sup><sub>j</sub>** using the following formula (works as a signle linear layer followed by a non-linearity)
-<p style="text-align:center;">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;h^{i+1}_j=σ(H^i*h^i_j + C^i*c^i_j)" />
-</p>
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;h^{i+1}_j=\sigma(H^i*h^i_j%20+%20C^i*c^i_j)" />
+
 
 - the output vectors **h<sup>i+1</sup>** are then averaged according to the following formula to compute the communication for the next step **c<sup>i+1</sup><sub>j</sub>**
 
-<p style="text-align:center;">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j%27\neq%20j}{h^{i+1}_{j%27}}" adjust="" />
-</p>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j%27\neq%20j}{h^{i+1}_{j%27}}"  />
 
 - agents are allowed to communicate to others within a certain range by using a mask
 
