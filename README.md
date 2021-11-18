@@ -29,7 +29,7 @@
 
 Settings & Goal: 
 - learn a discrete communication signal among agents in a fully cooperative, partially observable settings
-- At each timestep, agents take an environment action *u<sub>t</sub>* and communication action **m<sub>t</sub>** a discrete communication signal to other agents via a communication channel. Agents should then use their local observation accompanied with the messages from other agents to select their actions.
+- At each timestep, agents take an environment action **u<sub>t</sub>** and communication action **m<sub>t</sub>** a discrete communication signal to other agents via a communication channel. Agents should then use their local observation accompanied with the messages from other agents to select their actions.
 
 Approach: they developed 2 methods:
 - Reinforced Inter-Agent Learning (RIAL):  
