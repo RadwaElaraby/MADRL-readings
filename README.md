@@ -29,14 +29,24 @@
 
 Settings: fully cooperative, partially observable
 
-Approach: they use a deep Q network and developed 2 methods
-1. Reinforced Inter-AgentLearning (RIAL):  
-end-to-end trainable withinan agent (no gradients are passed between agents)
+Approach: they use a deep Q network
 
-2. Differentiable Inter-Agent Learning (DIAL) 
-gradients can be pushed through thecommunication channel, yielding a system that is end-to-end trainable even across agents
+They developed 2 methods:
+1. Reinforced Inter-Agent Learning (RIAL):  
+- end-to-end trainable within an agent (no gradients are passed between agents).
+- two deep Q_u abd Q_m networks $Q_u^a(o_t^a, m_{t-1}^a', h_{t-1}^a, u^a)$ where 
+o_t^a is the agent's local observation, 
+m_{t-1}^a' is the received message from the previou
 
-They followed a centralized training decentralized execution paradigm. Centralized training is done via parameter sharing (learning only one network for all agents) in RIAL and via both parameter sharing and pushing gradients across agents through the communication channel.
+2. Differentiable Inter-Agent Learning (DIAL):
+gradients can be pushed through the communication channel, yielding a system that is end-to-end trainable even across agents.
+
+
+They followed a centralized training decentralized execution paradigm. 
+
+Centralized training is achieved via:
+- parameter sharing (learning a single network) in RIAL.
+- parameter sharing and pushing gradients across agents through the communication channel in DIAL.
 
 
 ---
