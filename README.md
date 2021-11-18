@@ -35,13 +35,13 @@ Approach: they developed 2 methods:
     - o<sup>a</sup><sub>t</sub> is the agent's local observation, 
     - m<sup>a'</sup><sub>t-1</sub> are messages from other agents,
     - h<sup>a</sup><sub>t-1</sub> is the hidden state (recurrent neural network)
-  - an action selector is used to pick u<sup>a</sup><sub>t</sub> and m<sup>a</sup><sub>t</sub> from Q<sub>u</sub> and Q<sub>m</sub>, using an \epsilon-greedy policy.
-  - end-to-end trainable within an agent (no gradients are passed between agents)
+  - the Q values are then passed to an action selector unit to pick u<sup>a</sup><sub>t</sub> and m<sup>a</sup><sub>t</sub> (using an ε-greedy policy).
+  - it's end-to-end trainable within an agent (no gradients are passed between agents)
   - gradient chains are based on the DQN loss
 
 - Differentiable Inter-Agent Learning (DIAL):
-  - gradients can be pushed through the communication channel, yielding a system that is end-to-end trainable even across agents.
-  - communication actions are replaced with direction connections from the output of each agent's network to the input of others. 
+  - communication actions are replaced with direction connections from the output of one agent's network to the input of another
+  - gradients can be pushed through the communication channel, yielding a system that is end-to-end trainable even across agents
   - gradient chains are based on both the DQN loss and the backpropagated error from the recipient of the message to the sender
 
 They followed a centralized training decentralized execution paradigm. 
