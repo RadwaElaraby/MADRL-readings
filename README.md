@@ -90,7 +90,7 @@ Description:
 
 ![](imgs/sukhbaatar16_commNet.PNG)
 
-- a mask could be used to choose a certain range of agents to communicate with instead of broadcasting to all agents
+- as an alternative to broadcasting to all other agents, a mask could be used to choose only a certain range of agents to communicate with 
 
 [Implementation](https://github.com/0b01/CommNet/tree/b826f00e21c22f38bea288ca2ee8cc15e2dde1eb)
 
