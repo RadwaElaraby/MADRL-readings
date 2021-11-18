@@ -68,12 +68,10 @@ Goal:
 - coordination between agents in fully cooperative, partially observable settings by learning suitable communication between them
 
 Description: 
-- learns a single controller **Φ** that maps the states of **J** agents **s = {s<sub>1</sub>, ..., s<sub>J</sub>}** into their action probabilities **a = {a<sub>1</sub>, ..., a<sub>J</sub>}**
+- learns a single controller **Φ** that maps agents' states **s = {s<sub>1</sub>, ..., s<sub>J</sub>}** into their actions **a = {a<sub>1</sub>, ..., a<sub>J</sub>}** where **J** is the number of agents
+- **Φ** consists of individual modules f<sup>i</sup>(h<sup>i</sup><sub>j</sub>, c<sup>i</sup><sub>j</sub>) for each agent.
+- each module takes the hidden state **h<sup>i</sup><sub>j</sub>** and the communication c<sup>i</sup><sub>j</sub> and outputs the next hidden state **h<sup>i+1</sup><sub>j</sub>**
 
-Method:
-- Φ that encompases both the individual controllers for each agent and the communication between them.
-- the controller maps the states of all agents into their action probablities 
-- the controller consists of modules f<sup>i</sup>(h<sup>i</sup><sub>j</sub>, c<sup>i</sup><sub>j</sub>) where each module takes 
 
 ![](imgs/sukhbaatar16_commNet.PNG)
 
