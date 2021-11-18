@@ -74,14 +74,10 @@ class CommNet(nn.Module):
         self.agent_ids = None # placeholder for forward
 
         # RNN: (comm + hidden) -> hidden
-        if self.use_lstm:
-            self._lstm_enc = self.__build_encoder(self.hidsz * 4)
-            self._lstm_linear = LinearMulti(self.nmodels, self.hidsz, self.hidsz * 4)
-            self._lstm_linear.init_normal(self.init_std)
-        else:
-            self._rnn_enc = self.__build_encoder(self.hidsz)
-            self._rnn_linear = LinearMulti(self.nmodels, self.hidsz, self.hidsz)
-            self._rnn_linear.init_normal(self.init_std)
+
+        self._rnn_enc = self.__build_encoder(self.hidsz)
+        self._rnn_linear = LinearMulti(self.nmodels, self.hidsz, self.hidsz)
+        self._rnn_linear.init_normal(self.init_std)
 
         # Action layer
         self._action_linear = LinearMulti(self.nmodels, self.hidsz, self.nactions)
@@ -126,12 +122,9 @@ class CommNet(nn.Module):
         ret = [None] * 6
 
         # (c', h0) -> h1
-        if self.use_lstm:
-            next_hid, next_cell = self.__hid2hid(inp, comm_, prev_hid, prev_cell)
-            ret[2], ret[3] = next_hid, next_cell
-        else:
-            next_hid = self.__hid2hid(inp, comm_, prev_hid, None)
-            ret[2] = next_hid 
+
+        next_hid = self.__hid2hid(inp, comm_, prev_hid, None)
+        ret[2] = next_hid 
 
         action_prob, baseline = self.__action(next_hid)
         ret[0], ret[1] = action_prob, baseline
@@ -158,13 +151,8 @@ class CommNet(nn.Module):
         """
             (c', h0, c?) -> h1
         """
-        if self.model in ('mlp', 'rnn'):
-            hidstate = self._rnn(inp, comm_, prev_hid)
-        elif self.use_lstm:
-            hidstate, cellstate = self._lstm(inp, comm_, prev_hid, prev_cell)
-            return hidstate, cellstate
-        else:
-            raise Exception('model not supported')
+        hidstate = self._rnn(inp, comm_, prev_hid)
+
         return hidstate
 
     def _lstm(self, inp, comm_, prev_hid, prev_cell):
