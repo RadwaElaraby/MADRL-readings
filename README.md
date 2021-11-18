@@ -34,7 +34,8 @@ Approach: they use a deep Q network
 They developed 2 methods:
 - Reinforced Inter-Agent Learning (RIAL):  
   - end-to-end trainable within an agent (no gradients are passed between agents).
-  - trains two deep Q networks Q<sup>a</sup><sub>u</sub>(o<sup>a</sup><sub>t</sub>, m<sup>a'</sup><sub>t-1</sub>, h<sup>a</sup><sub>t-1</sub>, u<sup>a</sup>) and Q<sub>m</sub>(.) for actions and communication actions respectively, where o<sub>t</sub><sup>a</sup> is the agent's local observation, m<sub>t-1</sub><sup>a'</sup> is the received message from the previou
+  - they trains two deep Q networks Q<sup>a</sup><sub>u</sub>(o<sup>a</sup><sub>t</sub>, m<sup>a'</sup><sub>t-1</sub>, h<sup>a</sup><sub>t-1</sub>, u<sup>a</sup>) and Q<sub>m</sub>(.) to predict values for regular and communication actions respectively, where:
+    - o<sup>a</sup><sub>t</sub> represents agent's local observation, m<sub>t-1</sub><sup>a'</sup> is the received message from the previou
 
 - Differentiable Inter-Agent Learning (DIAL):
   - gradients can be pushed through the communication channel, yielding a system that is end-to-end trainable even across agents.
