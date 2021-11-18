@@ -27,7 +27,7 @@
 ---
 ## Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
 
-Settings: fully cooperative, partially observable
+Goal: learn communication protocols among agents in a fully cooperative, partially observable settings
 
 Approach: they use a deep Q network
 
