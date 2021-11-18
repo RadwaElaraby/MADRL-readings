@@ -71,10 +71,11 @@ Description:
 - learns a single controller **Φ** that maps agents' states **s = {s<sub>1</sub>, ..., s<sub>J</sub>}** into their actions **a = {a<sub>1</sub>, ..., a<sub>J</sub>}** where **J** is the number of agents
 - **Φ** consists of individual modules **f<sup>i</sup>** where i refers to the communication step
 - each module **f** takes two input vectors for each agent **j**: the hidden state **h<sup>i</sup><sub>j</sub>** and the communication **c<sup>i</sup><sub>j</sub>** and outputs a vector **h<sup>i+1</sup><sub>j</sub>**
-- the output hidden vectorss **h<sup>i+1</sup>** are averaged according to the following formula which computes the communication for the next step **c<sup>i+1</sup><sub>j</sub>**
+- the output vectors **h<sup>i+1</sup>** are then averaged according to the following formula to compute the communication for the next step **c<sup>i+1</sup><sub>j</sub>**
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j%27\neq%20j}{h^{i+1}_{j%27}}" />
-
+<p style="text-align:center;">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j%27\neq%20j}{h^{i+1}_{j%27}}" adjust="" />
+</p>
 
 
 ![](imgs/sukhbaatar16_commNet.PNG)
