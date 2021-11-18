@@ -34,7 +34,7 @@ Approach: they use a deep Q network
 They developed 2 methods:
 1. Reinforced Inter-Agent Learning (RIAL):  
 - end-to-end trainable within an agent (no gradients are passed between agents).
-- two deep Q<sup>u</sup> abd Q<sup>m</sup> networks Q_u^a(o_t^a, m_{t-1}^a', h_{t-1}^a, u^a) where 
+- two deep Q<sub>u</sub> abd Q<sub>m</sub> networks Q<sub>u</sub><sup>a</sup>(o<sub>t</sub><sup>a</sup>, m<sub>t-1</sub><sup>a'</sup>, h<sub>t-1</sub><sup>a</sup>, u<sup>a</sup>) where 
 o_t^a is the agent's local observation, 
 m_{t-1}^a' is the received message from the previou
 
