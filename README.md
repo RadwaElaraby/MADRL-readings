@@ -50,7 +50,7 @@ Centralized training is achieved via:
 - parameter sharing (learning a single network) in RIAL.
 - parameter sharing and pushing gradients across agents through the communication channel in DIAL.
 
-
+[](imgs/Foerster16_rial_dial.PNG)
 ---
 
 
