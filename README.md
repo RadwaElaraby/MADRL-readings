@@ -24,7 +24,7 @@
 
 
 
-
+----------
 ### Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
 
 Settings: fully cooperative, partially observable
@@ -37,6 +37,12 @@ end-to-end trainable withinan agent (no gradients are passed between agents)
 gradients can be pushed through thecommunication channel, yielding a system that is end-to-end trainable even across agents
 
 They followed a centralized training decentralized execution paradigm. Centralized training is done via parameter sharing (learning only one network for all agents) in RIAL and via both parameter sharing and pushing gradients across agents through the communication channel.
+
+----------
+
+---
+
+--
 
 ### Learning multiagent communication with backpropagation. (Sukhbaatar et al., 2016).
 
