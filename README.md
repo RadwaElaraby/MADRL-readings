@@ -28,13 +28,13 @@
 ## Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
 
 Settings & Goal: 
-- learn discrete communication protocols among agents in a fully cooperative, partially observable settings
-- At each timestep, agents are allowed to take an environment action which affects the environment, and send a discrete communication signal to other agents via a communication channel. Agents should then use their local observation accompanied with the messages from other agents to select their actions.
+- learn a discrete communication signal among agents in a fully cooperative, partially observable settings
+- At each timestep, agents take an environment action `u<sub>t</sub>` and communication action `m<sub>t</sub>` a discrete communication signal to other agents via a communication channel. Agents should then use their local observation accompanied with the messages from other agents to select their actions.
 
 Approach: they developed 2 methods:
 - Reinforced Inter-Agent Learning (RIAL):  
-  - agents use two deep Q networks Q<sup>a</sup><sub>u</sub>(o<sup>a</sup><sub>t</sub>, m<sup>a'</sup><sub>t-1</sub>, h<sup>a</sup><sub>t-1</sub>, u<sup>a</sup>) and Q<sub>m</sub>(.) to predict Q-values for environment and communication actions respectively, where:
-    - o<sup>a</sup><sub>t</sub> is the agent's local observation, 
+  - agents use two deep Q networks `Q<sup>a</sup><sub>u</sub>(o<sup>a</sup><sub>t</sub>, m<sup>a'</sup><sub>t-1</sub>, h<sup>a</sup><sub>t-1</sub>, u<sup>a</sup>)` and `Q<sub>m</sub>(.)` to predict Q-values for environment and communication actions respectively, where:
+    - `o<sup>a</sup><sub>t</sub>` is the agent's local observation, 
     - m<sup>a'</sup><sub>t-1</sub> are messages from other agents,
     - h<sup>a</sup><sub>t-1</sub> is the hidden state (recurrent neural network)
   - the Q values are then passed to an action selector unit to pick u<sup>a</sup><sub>t</sub> and m<sup>a</sup><sub>t</sub> (using an ε-greedy policy).
