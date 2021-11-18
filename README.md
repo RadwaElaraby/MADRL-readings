@@ -73,13 +73,6 @@ Description:
 - each module **f** takes two input vectors for each agent **j**: the hidden state **h<sup>i</sup><sub>j</sub>** and the communication **c<sup>i</sup><sub>j</sub>** and outputs a vector **h<sup>i+1</sup><sub>j</sub>**
 - the output hidden vectorss **h<sup>i+1</sup>** are averaged according to the following formula which computes the communication for the next step **c<sup>i+1</sup><sub>j</sub>**
 
-**c<sup>i+1</sup><sub>j</sub> = \frac{1}{J - 1} \sum{j'=j} {h<sup>i+1</sup><sub>j'</sub>} **
-
-$c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j'\neq j}{h^{i+1}_{j'}}$ 
-
-
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j'\neq j}{h^{i+1}_{j'}}" />
-
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j%27\neq%20j}{h^{i+1}_{j%27}}" />
 
 
