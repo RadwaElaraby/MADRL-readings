@@ -75,7 +75,10 @@ Description:
 
 **c<sup>i+1</sup><sub>j</sub> = \frac{1}{J - 1} \sum{j'=j} {h<sup>i+1</sup><sub>j'</sub>} **
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j = \frac{1}{J-1} \sum\limits_{j'\neq j} {h^{i+1}_{j'}}" />
+$c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j'\neq j}{h^{i+1}_{j'}}$ 
+
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j'\neq j}{h^{i+1}_{j'}}" />
 
 ![](imgs/sukhbaatar16_commNet.PNG)
 
