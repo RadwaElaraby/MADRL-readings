@@ -75,7 +75,7 @@ Description:
 
 **c<sup>i+1</sup><sub>j</sub> = \frac{1}{J - 1} \sum{j'=j} {h<sup>i+1</sup><sub>j'</sub>} **
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space; \frac{1}{J - 1}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{1}{J - 1}" />
 
 ![](imgs/sukhbaatar16_commNet.PNG)
 
