@@ -80,7 +80,7 @@ $c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j'\neq j}{h^{i+1}_{j'}}$
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j'\neq j}{h^{i+1}_{j'}}" />
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;c^{i+1}_j=\frac{1}{J-1}\sum\limits_{j%27\neq%20j}{h^{i+1}_{j%27}}" />
 
 
 
