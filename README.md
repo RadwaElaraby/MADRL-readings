@@ -126,26 +126,28 @@ Description:
 
 ![](imgs/singh19_ic3net.PNG)
 
-- the hidden state **h<sup>t</sup><sub>j</sub>** is passed to the policy **π** to generate the environment action **a<sup>t</sup><sub>j</sub>**
+- the hidden state **h<sup>t</sup><sub>j</sub>** is passed to a policy **π** to generate an environment action **a<sup>t</sup><sub>j</sub>**
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_j^t=\pi(h_j^t)" >
 
 
-- the hidden state **h<sup>t</sup><sub>j</sub>** is passed to a simple network **f<sup>g</sup>(.)** with a soft-max layer for 2 actions (communicate or not)
+- the hidden state **h<sup>t</sup><sub>j</sub>** is also passed to a simple network **f<sup>g</sup>(.)** with a soft-max layer for 2 actions (communicate or not)
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;g_j^{t+1}=f^g(h_j^t)" >
 
 - the LSTM receives the local observation **o<sup>t</sup><sub>j</sub>**, the hidden and cell states **h<sup>t</sup><sub>j</sub>** and **c<sup>t</sup><sub>j</sub>** and the communication vector **c<sup>t</sup><sub>j</sub>**, and use it to generate the new hidden and cell states **h<sup>t+1</sup><sub>j</sub>** and **c<sup>t+1</sup><sub>j</sub>**
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_j^{t+1},s_j^{t+1}=LSTM(e(o_j^t)+c_j^t,h_j^t,s_j^t)" >
 
-- next, the new hidden state **h<sup>t+1</sup><sub>j</sub>** and the binary action **g<sup>t+1</sup><sub>j'</sub>** are used to compute the gated average hidden state and is then transformed into a communication tensor by **C** (linear transformation matrix)
+- next, the new hidden state **h<sup>t+1</sup><sub>j</sub>** and the binary action **g<sup>t+1</sup><sub>j'</sub>** are used to compute a gated average hidden state and is then transformed into a communication tensor by **C** (linear transformation matrix)
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_j^{t+1}=\frac{1}{J-1}C\sum\limits_{j%27%20\neq%20j%20}{h_{j%27}^{t+1}}%20\odot%20g_{j%27}^{t+1}" >
 
 
 Side notes:
+- uses REINFORCE to train **π** and **f<sup>g</sup>(.)**
 - uses individual rewards for each agent which helps with credit assignment issues
 - amenable to dynamic number of agents
-- 
+
+
 ---
 
 ## TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
