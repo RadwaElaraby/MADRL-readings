@@ -157,7 +157,7 @@ Description:
 - at each timestep t, each agent **i** receives a local observation **o<sup>i</sup><sub>t</sub>**
 - the first part of the policy network (corresponds to the glimpse network) encodes local observation and action intention of an agent into a hidden layer (a thought / the glimpse feature vector), represented as **h<sup>i</sup><sub>t</sub> = μ<sub>I</sub>(o<sup>i</sup><sub>t</sub>; Θ)**
 - every **T** timesteps, the attention unit takes **h<sup>i</sup><sub>t</sub>** as input and determines whether communication is needed for cooperation
-- when communication is needed, the agent (initiator) forms a communication group by select at most **m** (fixed bandwidth) agents (collaborators) from those in its observable field based on proximity
+- when communication is needed, the agent (initiator) forms a communication group by selecting at most **m** (fixed bandwidth) agents (collaborators) from those in its observable field based on proximity
 - the communication channel connects each agent of the communication group by taking their thoughts as input and outputing an integrated thought **{ĥ<sup>i</sup><sub>t</sub>,ĥ<sup>j</sup><sub>t</sub>} = g(h<sup>i</sup><sub>t</sub>,h<sup>j</sup><sub>t</sub>)** that guides them to generate coordinated actions 
 - the integrated thought **ĥ<sup>i</sup><sub>t</sub>** merged with the hidden state **h<sup>i</sup><sub>t</sub>** are fed into the second part of the policy network to output the action **a<sup>i</sup><sub>t</sub> = μ<sub>II</sub>(h<sup>i</sup><sub>t</sub>;ĥ<sup>i</sup><sub>t</sub>; Θ)**
 
