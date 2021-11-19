@@ -104,17 +104,12 @@ Description:
 
 
 
-
-
-
 ---
 
-## Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
+## ** Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
 
 ---
-## Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
-
-
+## ** Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
 
 ---
 
@@ -149,6 +144,12 @@ Side notes:
 - the applied targeting mechanism is implicit (encode properties of recipients without addressing them explicitly)
 - supports multiple rounds of interactions at every timestep 
 - can be extended into competitve settings by utilizing the hard gating action from IC3Net to decide whether communication is needed or not (IC3Net + TarMAC models can learn both when to communicate and whom to address messages to)
+
+
+
+---
+
+## ** VAIN: Attentional Multi-agent Predictive Modeling (Yedid 2017)
 
 
 
