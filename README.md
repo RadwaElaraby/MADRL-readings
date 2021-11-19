@@ -149,21 +149,25 @@ Side notes:
 ## Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
 
 Goal:
-- ad
+- enables **dynamic** communication among agents only when necessary
+- in real-world applications, communication is usually restricted by bandwidth or range. so, it may not be possible to maintain full connectivity among all agents
 
 Description:
-- ATOC could be seen as an extension of an actor-critic model 
-- it consists of a policy network, a Q-network, an attention unit and a communication channel
+- ATOC is as an extension of an actor-critic model 
+- it consists of a policy network, a Q-network, an attention unit (RNN or MLP) and a communication channel (bi-directional LSTM)
 - at each timestep t, each agent **i** receives a local observation **o<sup>i</sup><sub>t</sub>**
-- the first part of the policy network encodes local observation and action intention into a hidden layer (a thought), represented as **h<sup>i</sup><sub>t</sub> = μ<sub>I</sub>(o<sup>i</sup><sub>t</sub>; Θ)**
-- every **T** timesteps, the attention unit takes **h<sup>i</sup><sub>t</sub>** as input and determines whether communication is needed for cooperation.
-- when communication is needed, the agent (initiator) forms a communication group from the agents in its observable field (collaborators)
-- the communication channel connects each agent of the communication group by taking the thoughts of each agent and outputs an integrated thought **ĥ<sup>i</sup><sub>t</sub>** that guides those agents to generate coordinated actions 
+- the first part of the policy network (corresponds to the glimpse network) encodes local observation and action intention into a hidden layer (a thought / the glimpse feature vector), represented as **h<sup>i</sup><sub>t</sub> = μ<sub>I</sub>(o<sup>i</sup><sub>t</sub>; Θ)**
+- every **T** timesteps, the attention unit takes **h<sup>i</sup><sub>t</sub>** as input and determines whether communication is needed for cooperation
+- when communication is needed, the agent (initiator) forms a communication group by select at most **m** (fixed bandwidth) agents (collaborators) from those in its observable field based on proximity
+- the communication channel connects each agent of the communication group by taking their thoughts as input and outputing an integrated thought **{ĥ<sup>i</sup><sub>t</sub>,ĥ<sup>j</sup><sub>t</sub>} = g(h<sup>i</sup><sub>t</sub>,h<sup>j</sup><sub>t</sub>)** that guides them to generate coordinated actions 
 - the integrated thought **ĥ<sup>i</sup><sub>t</sub>** merged with the hidden state **h<sup>i</sup><sub>t</sub>** are fed into the second part of the policy network to output the action **a<sup>i</sup><sub>t</sub> = μ<sub>II</sub>(h<sup>i</sup><sub>t</sub>;ĥ<sup>i</sup><sub>t</sub>; Θ)**
 
-
-
 ![](imgs/jiang18_atoc.PNG)
+
+Side notes:
+- because the communication channel is represented as LSTM, it can selectively output information that promotes cooperation and forget information that impedes cooperation through gates (this is different from commNet which uses arithmetic mean) 
+- if an agent is selected by multiple initiators, it participates in the communication of each group consequently. It could then bridge the information gap and disseminate the thought within a group to other groups
+- all agents share one policy network
 
 
 ---
