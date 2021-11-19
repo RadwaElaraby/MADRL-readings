@@ -121,6 +121,16 @@ Goal:
 
 Description:
 - Individualized Controlled ContinuousCommunication Model (IC3Net) 
+- uses a gs
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;g_j^{t+1}=f^g(h_j^t)" >
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;h_j^{t+1},s_j^{t+1}=LSTM(e(o_j^t)+c_j^t,h_j^t,s_j^t)" >
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\frac{1}{J-1}C\sum\limits_{j%27%20\neq%20j%20}" >{h_{j%27}^{t+1}}%20\odot%20g_{j%27}^{t+1}
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_j^t=\pi(h_j^t)" >
+
 
 ![](imgs/singh19_ic3net.PNG)
 
