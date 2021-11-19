@@ -122,7 +122,7 @@ Goal:
 Description:
 - Individualized Controlled ContinuousCommunication Model (IC3Net) 
 
-![](imgs/singh18_ic3net.PNG)
+![](imgs/singh19_ic3net.PNG)
 
 Side notes:
 - uses individual rewards for each agent which helps with credit assignment issues
