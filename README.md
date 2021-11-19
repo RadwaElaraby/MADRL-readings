@@ -134,7 +134,7 @@ Description:
 
 ![](imgs/das20_targeted_communication.PNG)
 
-- the query vector is multiplied by the signature vector to obtain attention weights **α<sub>ij</sub>** which is then multiplied by the value vector **v<sup>t</sup><sub>i</sub>** to compute the input message **c<sup>t+1</sup><sub>j</sub>** for the agent at **t+1**
+- the query vector **q<sup>t+1</sup><sub>j</sub>** is multiplied by the received signature vector **k<sup>t</sup><sub>i</sub>** to compute the attention weights **α<sub>ij</sub>** which is then multiplied by the received value vector **v<sup>t</sup><sub>i</sub>** to compute the input message **c<sup>t+1</sup><sub>j</sub>** for the agent at **t+1**
 
 ![](imgs/das20_weights.PNG)
 
