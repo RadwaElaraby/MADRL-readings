@@ -120,7 +120,7 @@ Description:
 
 ## TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
 
-Goal: not only learn what messages to send, but also to whom to address (in cooperative partially-observable settings)
+Goal: not only learn what to send, but also to whom to address (in cooperative partially-observable settings)
 
 Description:
 - allows agents to choose which agents to address messages to using a signature-based soft attention mechanism
