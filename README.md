@@ -129,8 +129,7 @@ Description:
 
 ![](imgs/das20_policy_network.PNG)
 
-- each message consists of a signature **k<sup>t</sup><sub>i</sub>** and a value **v<sup>t</sup><sub>i</sub>**
-- the signature encodes the properties of the recipient
+- each message consists of a signature **k<sup>t</sup><sub>i</sub>** (encoding the properties of the recipient) and a value **v<sup>t</sup><sub>i</sub>**
 - at the receiving side, each agent **j** predicts a query vector **q<sup>t+1</sup><sub>j</sub>** from its hidden state **h<sup>t+1</sup><sub>j</sub>** 
 
 ![](imgs/das20_targeted_communication.PNG)
