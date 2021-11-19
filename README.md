@@ -1,17 +1,13 @@
 # MADRL-readings
 
 
-## ** Counterfactual Multi-Agent Policy Gradients (Foerster et al., 201)
-
-
---- 
 
 
 
 ## ** Multi-agent actor-critic for mixed cooperative-competitive environments. (Lowe et al., 2017)
 
 ---
-## Counterfactual multi-agent policy gradients. (Foerster et al., 2018)
+## ** Counterfactual multi-agent policy gradients. (Foerster et al., 2018)
 
 ---
 ## Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
