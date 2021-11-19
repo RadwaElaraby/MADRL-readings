@@ -121,15 +121,23 @@ Goal:
 
 Description:
 - Individualized Controlled ContinuousCommunication Model (IC3Net) 
-- uses a gs
+- a controller is used where each agent is controlled by an individual LSTM (still share parameters)
+- allows agents to communicate their internal state gated by a discrete action
+- the hidden state h<sup>t</sup><sub>j</sub> is passed to f<sup>g</sup>(.), which is a simple network twith a soft-max layer for 2 actions (communicate or not) 
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;g_j^{t+1}=f^g(h_j^t)" >
+
+- the hidden state h<sup>t</sup><sub>j</sub> is also passed to the policy π to generate the environment action a<sup>t</sup><sub>j</sub>
+
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_j^t=\pi(h_j^t)" >
+
+- 
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_j^{t+1},s_j^{t+1}=LSTM(e(o_j^t)+c_j^t,h_j^t,s_j^t)" >
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_j^{t+1}=\frac{1}{J-1}C\sum\limits_{j%27%20\neq%20j%20}{h_{j%27}^{t+1}}%20\odot%20g_{j%27}^{t+1}" >
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;a_j^t=\pi(h_j^t)" >
+
 
 
 ![](imgs/singh19_ic3net.PNG)
