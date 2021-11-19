@@ -149,8 +149,7 @@ Side notes:
 ## Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
 
 Goal:
-- enables **dynamic** communication among agents only when necessary
-- in real-world applications, communication is usually restricted by bandwidth or range. so, it may not be possible to maintain full connectivity among all agents
+- enables **dynamic** communication among agents only when necessary because, in real-world applications, communication is usually restricted by bandwidth or range, and it may not be possible to maintain full connectivity among all agents
 
 Description:
 - ATOC is as an extension of an actor-critic model 
