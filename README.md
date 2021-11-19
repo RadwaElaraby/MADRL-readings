@@ -123,11 +123,11 @@ Description:
 - Individualized Controlled ContinuousCommunication Model (IC3Net) 
 - a controller is used where each agent is controlled by an individual LSTM (still share parameters)
 - allows agents to communicate their internal state gated by a discrete action
-- the hidden state h<sup>t</sup><sub>j</sub> is passed to f<sup>g</sup>(.), which is a simple network twith a soft-max layer for 2 actions (communicate or not) 
+- the hidden state **h<sup>t</sup><sub>j</sub>** is passed to **f<sup>g</sup>(.)**, which is a simple network twith a soft-max layer for 2 actions (communicate or not) 
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;g_j^{t+1}=f^g(h_j^t)" >
 
-- the hidden state h<sup>t</sup><sub>j</sub> is also passed to the policy π to generate the environment action a<sup>t</sup><sub>j</sub>
+- the hidden state **h<sup>t</sup><sub>j</sub>** is also passed to the policy **π** to generate the environment action **a<sup>t</sup><sub>j</sub>**
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_j^t=\pi(h_j^t)" >
 
