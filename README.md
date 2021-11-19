@@ -123,13 +123,15 @@ Description:
 Goal: not only learn what messages to send, but also to whom to address (in cooperative partially-observable settings)
 
 Description:
-- allows agents to choose which agents to address messages to using a soft attention mechanism
-- at each timestep, each agent receives a local observation vector **w<sup>t</sup><sub>i</sub>** and an aggregated message vector **c<sup>t</sup><sub>i</sub>** from all other agents, and uses them to update its hidden state **h<sup>t</sup><sub>i</sub>** (GRU)
-- it then uses its policy **π<sub>Θ<sub>i</sub></sub>()** to output distribution over its actions, and an outgoing message vector **M<sup>t</sup><sub>i</sub>**
+- allows agents to choose which agents to address messages to using a signature-based soft attention mechanism
+- at each timestep, each agent receives a local observation vector **w<sup>t</sup><sub>i</sub>** and an aggregated message vector **c<sup>t</sup><sub>i</sub>** from all other agents, and update its hidden state **h<sup>t</sup><sub>i</sub>** accordingly 
+- the agent uses its policy **π<sub>Θ<sub>i</sub></sub>()** to output a probability distribution over its actions, and to also output an outgoing message vector **m<sup>t</sup><sub>i</sub>**
 - each message consists of a signature **k<sup>t</sup><sub>i</sub>** and a value **v<sup>t</sup><sub>i</sub>**
 - the signature encodes the properties of the recipient
 - at the receiving side, each agent **j** predicts a query vector **q<sup>t+1</sup><sub>j</sub>** from its hidden state **h<sup>t+1</sup><sub>j</sub>** 
 - the query vector is multiplied by the signature vector to obtain attention weights **α<sub>ij</sub>** which is then multiplied by the value vector **v<sup>t</sup><sub>i</sub>** to compute the input message **c<sup>t+1</sup><sub>j</sub>** for the agent at **t+1**
+![](imgs/das20_weights.PNG)
+![](imgs/das20_messages.PNG)
 - 
 
 Side notes: 
