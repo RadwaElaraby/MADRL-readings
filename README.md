@@ -140,7 +140,7 @@ Description:
 
 ![](imgs/das20_messages.PNG)
 
-- 
+- attention weights are high when both sender and receiver predict similar signature and query vectors respectively
 
 Side notes: 
 - centralized training and decentralized execution paradigm
@@ -148,7 +148,7 @@ Side notes:
 - policy parameters are shared across agents
 - the applied targeting mechanism is implicit (encode properties of recipients without addressing them explicitly)
 - supports multiple rounds of interactions at every timestep 
-- can be extended into competitve settings by combining it with IC3Net 
+- can be extended into competitve settings by utilizing the hard gating action from IC3Net to decide whether communication is needed or not (IC3Net + TarMAC models can learn both when to communicate and whom to address messages to)
 
 
 
