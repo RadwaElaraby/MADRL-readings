@@ -146,10 +146,10 @@ Side notes:
 
 ---
 
-## ** Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
+## Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
 
 Goal:
-- 
+- ad
 
 Description:
 - ATOC could be seen as an extension of an actor-critic model 
@@ -158,9 +158,8 @@ Description:
 - the first part of the policy network encodes local observation and action intention into a hidden layer (a thought), represented as **h<sup>i</sup><sub>t</sub> = μ<sub>I</sub>(o<sup>i</sup><sub>t</sub>; Θ)**
 - every **T** timesteps, the attention unit takes **h<sup>i</sup><sub>t</sub>** as input and determines whether communication is needed for cooperation.
 - when communication is needed, the agent (initiator) forms a communication group from the agents in its observable field (collaborators)
-- the communication channel connects each agent of the communication group by taking the thoughts of each agent and outputs an integrated thought **ĥ<sup>i</sup><sub>t</sub>** that guides agents to generate coordinated actions 
-- the integrated thought merged with the hidden state and fed into the second part of the policy network
-- the policy network then outputs the action **a<sup>i</sup><sub>t</sub> = μ<sub>II</sub>(h<sup>i</sup><sub>t</sub>;ĥ<sup>i</sup><sub>t</sub>; Θ)**
+- the communication channel connects each agent of the communication group by taking the thoughts of each agent and outputs an integrated thought **ĥ<sup>i</sup><sub>t</sub>** that guides those agents to generate coordinated actions 
+- the integrated thought **ĥ<sup>i</sup><sub>t</sub>** merged with the hidden state **h<sup>i</sup><sub>t</sub>** are fed into the second part of the policy network to output the action **a<sup>i</sup><sub>t</sub> = μ<sub>II</sub>(h<sup>i</sup><sub>t</sub>;ĥ<sup>i</sup><sub>t</sub>; Θ)**
 
 
 
