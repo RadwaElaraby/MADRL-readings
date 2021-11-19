@@ -114,3 +114,35 @@ Description:
 ---
 ## Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
 
+
+
+---
+
+## TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
+
+Goal: not only learn what messages to send, but also to whom to address (in cooperative partially-observable settings)
+
+Description:
+- allows agents to choose which agents to address messages to by using soft attention mechanism
+- at each timestep, each agent receives a local observation vector **w<sup>t</sup><sub>i</sub>** and an aggregated message vector **c<sup>t</sup><sub>i</sub>** from all other agents, and uses them to update its hidden state **h<sup>t</sup><sub>i</sub>** (GRU)
+- each agent has a policy **π<sup>Θ<sup>i</sup></sub>()**
+
+
+Side notes: 
+- centralized training and decentralized execution paradigm
+- uses actor critic algorithm with a centralized critic learnt over the agents' joint action space
+- policy parameters are shared across agents
+- the applied targeting mechanism is implicit (encode properties of recipients without addressing them explicitly)
+- supports multiple rounds of interactions at every timestep 
+- can be extended into competitve settings by combining it with IC3Net 
+
+
+
+
+
+
+
+
+
+
+
