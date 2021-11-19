@@ -137,11 +137,9 @@ Description:
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;h_j^{t+1},s_j^{t+1}=LSTM(e(o_j^t)+c_j^t,h_j^t,s_j^t)" >
 
-- next, the new hidden state **h<sup>t+1</sup><sub>j</sub>** and the binary action **g<sup>t+1</sup><sub>j</sub>** are used to compute the gated average hidden state and transformed into a communication tensor where **C** is a linear transformation matrix
+- next, the new hidden state **h<sup>t+1</sup><sub>j</sub>** and the binary action **g<sup>t+1</sup><sub>j'</sub>** are used to compute the gated average hidden state and is then transformed into a communication tensor by **C** (linear transformation matrix)
+
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;c_j^{t+1}=\frac{1}{J-1}C\sum\limits_{j%27%20\neq%20j%20}{h_{j%27}^{t+1}}%20\odot%20g_{j%27}^{t+1}" >
-
-
-
 
 
 Side notes:
