@@ -114,6 +114,20 @@ Description:
 ---
 ## ** Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
 
+Goal: 
+- learn what to communicate and when to communicate (allows agents to block their communication using a gating mechanism)
+- suitable for any scenario (semi-cooperative, competitve and cooperative settings)
+
+
+Description:
+- Individualized Controlled ContinuousCommunication Model (IC3Net) 
+
+![](imgs/singh18_ic3net.PNG)
+
+Side notes:
+- uses individual rewards for each agent which helps with credit assignment issues
+- amenable to dynamic number of agents
+- 
 ---
 
 ## TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
