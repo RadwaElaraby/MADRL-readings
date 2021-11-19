@@ -99,7 +99,7 @@ Description:
 
 ---
 
-## Multiagent bidirectionally-coordinated nets: Emergence of human-level coordination in learning to play starcraft combat games. (Peng et al., 2017)
+## * Multiagent bidirectionally-coordinated nets: Emergence of human-level coordination in learning to play starcraft combat games. (Peng et al., 2017)
 
 ---
 ## Revisiting the master-slave architecture in multi-agent deep reinforcement learning. (Kong et al., 2017),
