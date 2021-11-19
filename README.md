@@ -120,12 +120,12 @@ Goal:
 
 
 Description:
-- called Individualized Controlled ContinuousCommunication Model (IC3Net) 
+- the method is called Individualized Controlled ContinuousCommunication Model (IC3Net) 
+- it allows agents to communicate their internal state gated by a discrete action
 - a controller is used where each agent is controlled by an individual LSTM (still share parameters)
 - the hidden state **h<sup>t</sup><sub>j</sub>** is passed to the policy **π** to generate the environment action **a<sup>t</sup><sub>j</sub>**
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;a_j^t=\pi(h_j^t)" >
 
-- allows agents to communicate their internal state gated by a discrete action
 
 - the hidden state **h<sup>t</sup><sub>j</sub>** is passed to a simple network **f<sup>g</sup>(.)** with a soft-max layer for 2 actions (communicate or not)
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;g_j^{t+1}=f^g(h_j^t)" >
