@@ -4,7 +4,7 @@
 
 
 
-## ** Multi-agent actor-critic for mixed cooperative-competitive environments. (Lowe et al., 2017)
+## *** Multi-agent actor-critic for mixed cooperative-competitive environments. (Lowe et al., 2017)
 
 ---
 ## ** Counterfactual multi-agent policy gradients. (Foerster et al., 2018)
