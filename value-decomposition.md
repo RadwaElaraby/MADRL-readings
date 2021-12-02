@@ -87,7 +87,7 @@ Given observed trajectories in a real task, partition all entities into two disj
 
 estimate utility of their actions given the full observations Q<sup>tot</sup>
 
-estimate their utilities for both interactions within their group Q<sup>a</sup><sub>I</sub>(τ<sup>a</sup><sub>I</sub>,u<sup>a</sup>;θ_Q), as well as for interactions outside of their group Q<sup>a</sup><sub>O</sub>(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ_Q), and monotonically mix them (using hypernetworks) to predict an estimate of the value function Q<sup>tot</sup><sub>aux</sub> (uses the same model) that we train as an auxiliary objective
+uses the same model, estimate their utilities for both interactions within their group Q<sup>a</sup><sub>I</sub>(τ<sup>a</sup><sub>I</sub>,u<sup>a</sup>;θ_Q), as well as for interactions outside of their group Q<sup>a</sup><sub>O</sub>(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ_Q), and monotonically mix them (using hypernetworks) to predict an estimate of the value function Q<sup>tot</sup><sub>aux</sub>, and train it as an auxiliary objective
 
 in-group utility Q<sup>a</sup><sub>I</sub>(τ<sup>a</sup><sub>I</sub>,u<sup>a</sup>;θ_Q) indicates what its utility would be had it solely observed the entities in its group
 out-group utility Q<sup>a</sup><sub>O</sub>(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ_Q) to account for the potential interactions with entities outside of the agents group
