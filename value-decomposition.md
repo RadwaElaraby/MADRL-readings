@@ -4,7 +4,7 @@
 
 
 
-## Value-Decomposition Networks For CooperativeMulti-Agent Learning (Sunehag et al., 2017)
+## Value-Decomposition Networks For Cooperative Multi-Agent Learning (Sunehag et al., 2017)
 
 a system of several learning agents must jointly optimize a single reward signal. The centralised approach fails by learning inefficient policies with only one agent active and the other being “lazy”. In contrast, independent Q-learners cannot distinguish teammates’ exploration from stochasticity in the environment
 
