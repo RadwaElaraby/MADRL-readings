@@ -83,7 +83,7 @@ The idea is that learning to predict agents’ utilities within sub-groups of en
 
 We could construct an estimate of the value function from factors based on randomized sub-groups (shares parameters with the full value function) and train this factorized version of the value function as an auxiliary objective
 
-Given observed trajectories in a real task, partition all entities into two disjunct groups, held fixed for the episode (“imagine” that agents only observe a (random) subset of the entities)
+Given observed trajectories in a real task, partition all entities into two disjunct groups, held fixed for the episode (as an “imagination” that agents only observe a (random) subset of the entities)
 
 estimate utility of their actions given the full observations Q<sup>tot</sup>
 
