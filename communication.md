@@ -1,9 +1,5 @@
 # MADRL-readings
 
-
----
-## ** Counterfactual multi-agent policy gradients. (Foerster et al., 2018)
-
 ---
 ## Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
 
