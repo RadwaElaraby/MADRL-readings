@@ -68,3 +68,37 @@ QMIX outperforms IQL and VDN, both in terms of absolute performance and learning
 
 VDN -> can represent any value function that can be factored into a **linear** monotonic value functions 
 QMIX -> can represent any value function that can be factored into a **non-linear** monotonic combination of the agents’ individual value func-tions 
+
+
+
+---
+
+## Randomized Entity-wise Factorization for Multi-Agent Reinforcement Learning (Iqbal al., 2021)
+
+Randomized Entity-wise Factorization for Imagined Learning (REFIL)
+
+aims to develop a methodology for agents to incorporate knowledge of shared patterns to accelerate learning ina multi-task setting.
+
+Many real-world multi-agent settings contain tasks across which an agent must deal with varying quantities and types of cooperative agents, antagonists, or otherentities. Within these varied tasks, common patterns often emerge in sub-groups of the entities. How can we teach agents to be “situationally aware” of common patterns that are not pre-specified, such that they can share knowledge across tasks?
+
+The idea is that learning to predict agents’ utilities within sub-groups of entities is a strong inductive bias that allows models to share information more freely across tasks
+
+We could construct an estimate of the value function from factors based on randomized sub-groups (sharing parameters with the full value function) and train this factorized version of the value function as an auxiliary objective
+
+Given observed trajectories in a real task
+partition all entities into two disjunct groups, held fixed for the episode
+sub-set of all agents is denoted m<sub>A</sub>:= [m<sub>a</sub>]a<sub>∈A</sub>
+
+randomly partition entities into sub-groups to “imagine” that agents only observe a (random) subset of the entities theyactually observe
+estimate utility of their actions given the full observations
+use the same model to predict utilities in the imagined scenario
+we must include factors that account for the effect interactions out-side  of sampled sub-groups on  each agent’s  utility
+Imagined sub-group factors are combined with interaction factors to produce an estimate of the value function that we train as an auxiliary objective on top of a standard value function loss.
+
+
+Note: 
+REFIL can be implemented easily in practice by using masks in attention-based models
+
+
+
+
