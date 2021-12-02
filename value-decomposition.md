@@ -77,7 +77,7 @@ QMIX outperforms IQL and VDN, both in terms of absolute performance and learning
 
 Randomized Entity-wise Factorization for Imagined Learning (REFIL): aims to develop a methodology for agents to incorporate knowledge of shared patterns to accelerate learning in a multi-task setting.
 
-Many real-world multi-agent settings contain tasks across which an agent must deal with varying quantities and types of agents. Within these varied tasks, common patterns often emerge in sub-groups of these entities. How can we teach agents to be “situationally aware” of common patterns that are not pre-specified, such that they can share knowledge across tasks?
+Many real-world multi-agent settings contain tasks across which an agent must deal with varying quantities and types of agents and non-agent entities. Within these varied tasks, common patterns often emerge in sub-groups of these entities. How can we teach agents to be “situationally aware” of common patterns that are not pre-specified, such that they can share knowledge across tasks?
 
 The idea is that learning to predict agents’ utilities within sub-groups of entities is a strong inductive bias that allows models to share information more freely across tasks
 
