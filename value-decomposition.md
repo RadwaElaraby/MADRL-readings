@@ -92,8 +92,8 @@ estimate utility of their actions given the full observations Q<sup>tot</sup>
 
 estimate their utilities for both interactions within their group, as well as to account for the interactions outside of their group, and monotonically mixed to predict an estimate of the value function Q<sup>tot</sup><sub>aux</sub> (uses the same model) that we train as an auxiliary objective
 
-in-group utility Q<sup>a</sup><sup>I</sup>(τ<sup>a</sup><sub>I</sub>,u<sup>a</sup>;θ_Q) indicates what its utility would be had it solely observed the entities in its group
-out-group utility Q<sup>a</sup>O(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ_Q) to account for the potential interactions with entities outside of the agents group
+in-group utility Q<sup>a</sup><sub>I</sub>(τ<sup>a</sup><sub>I</sub>,u<sup>a</sup>;θ_Q) indicates what its utility would be had it solely observed the entities in its group
+out-group utility Q<sup>a</sup><sub>O</sub>(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ_Q) to account for the potential interactions with entities outside of the agents group
 both utilities share the same parameters θ_Q, allowing to leverage imagined experience to improve utility prediction in real scenarios and vice versa
 
 Since we do not know the returns within the imagined sub-groups, we ground our predictions in the observed returns 
