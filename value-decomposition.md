@@ -77,7 +77,7 @@ QMIX -> can represent any value function that can be factored into a **non-linea
 
 Randomized Entity-wise Factorization for Imagined Learning (REFIL)
 
-Many real-world multi-agent settings contain tasks across which an agent must deal with varying quantities and types of agents. Within these varied tasks, common patterns often emerge in sub-groups. How can we teach agents to be “situationally aware” of common patterns that are not pre-specified, such that they can share knowledge across tasks?
+Many real-world multi-agent settings contain tasks across which an agent must deal with varying quantities and types of agents. Within these varied tasks, common patterns often emerge in sub-groups of these entities. How can we teach agents to be “situationally aware” of common patterns that are not pre-specified, such that they can share knowledge across tasks?
 
 aims to develop a methodology for agents to incorporate knowledge of shared patterns to accelerate learning in a multi-task setting.
 
