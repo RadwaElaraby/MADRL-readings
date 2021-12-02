@@ -40,7 +40,7 @@ Notes
 
 a value-based method that can train decentralised policies in a centralised end-to-end fash-ion
 
-a network that estimates joint action-values as a complex non-linear combination of per-agent values that condition only on local observations
+a network that estimates joint action-values as a complex **non-linear** combination of per-agent values that condition only on local observations
 
 VDN severely limits the complexity of centralised action-value functions that can be represented and ignores any extra state information available during training. Alternatively, QMIX can represent a much richer class of action-value functions
 
@@ -48,16 +48,23 @@ The full factorisation of VDN is not necessary to extract decentralised policies
 
 ![](imgs/rashidet18_consistency_constraint.PNG)
 
+Monotonicity can be enforced through a constraint on the relationship between Qtot and each Qa
+
+![](imgs/rashidet18_monotonicity_constraint.PNG)
+
 each agent can participate in a decentralised execution by choosing greedy actions with respect to its Qa
 
 QMIX architecture consists of agent networks, a mixing network, and a set of hypernetworks
 
 ![](imgs/rashidet18_qmix_architecture.PNG)
 
-- for each agent, agent network that represents its individual value function Q_a (DRQNs)
+- for each agent, an agent network that represents its individual value function Q_a (DRQNs)
 - a mixing network that combines them into Q_tot in a complex non-linear way that ensures consistency (the weights of the mixing network are restricted to be non-negative to enforce the monotonicity constraint)
 - a set of hypernetworks: each hypernetwork takes the states as input and generates the weights of one layer of the mixing network. it uses an absolute activation function, to ensure that the mixing network weights are non-negative
 
 QMIX transforms the centralised state into the weights of another neural network. This second neural network is constrained to be monotonic with respect to its inputs by keeping its weights positive.
 
 QMIX outperforms IQL and VDN, both in terms of absolute performance and learning speed
+
+VDN -> can represent any value function that can be factored into a **linear** monotonic value functions 
+QMIX -> can represent any value function that can be factored into a **non-linear** monotonic combination of the agents’ individual value func-tions 
