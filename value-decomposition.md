@@ -89,9 +89,9 @@ estimate utility of their actions given the full observations Q<sup>tot</sup>
 
 using the same model, estimate their utilities for both interactions within their group Q<sup>a</sup><sub>I</sub>(τ<sup>a</sup><sub>I</sub>,u<sup>a</sup>;θ<sub>Q</sub>), as well as for interactions outside of their group Q<sup>a</sup><sub>O</sub>(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ<sub>Q</sub>), and monotonically mix them (using hypernetworks) to predict an estimate of the value function Q<sup>tot</sup><sub>aux</sub>, and train it as an auxiliary objective
 
-in-group utility Q<sup>a</sup><sub>I</sub>(τ<sup>a</sup><sub>I</sub>,u<sup>a</sup>;θ<sub>Q</sub>) indicates what its utility would be had it solely observed the entities in its group
-out-group utility Q<sup>a</sup><sub>O</sub>(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ<sub>Q</sub>) to account for the potential interactions with entities outside of the agents group
-both utilities share the same parameters θ<sub>Q</sub>, allowing to leverage imagined experience to improve utility prediction in real scenarios and vice versa
+- in-group utility Q<sup>a</sup><sub>I</sub>(τ<sup>a</sup><sub>I</sub>,u<sup>a</sup>;θ<sub>Q</sub>) indicates what its utility would be had it solely observed the entities in its group
+- out-group utility Q<sup>a</sup><sub>O</sub>(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ<sub>Q</sub>) to account for the potential interactions with entities outside of the agents group
+- both utilities share the same parameters θ<sub>Q</sub>, allowing to leverage imagined experience to improve utility prediction in real scenarios and vice versa
 
 Since we do not know the returns within the imagined sub-groups, we ground our predictions in the observed returns 
 we learn an imagined value function with 2n factors (Q<sup>a</sup><sub>I</sub> and Q<sup>a</sup><sub>O</sub> for each agent) that estimates the same value
