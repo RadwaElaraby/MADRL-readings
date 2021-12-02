@@ -12,13 +12,17 @@ The value decomposition network aims to learn an optimal linear value decomposit
 
 The main assumption is that the joint action-value function for the system can be additively decomposed into value functions across agents
 
+![](imgs/sunehag2017_assumption.PNG)
+
 ![](imgs/sunehag2017_VDN_vs_I.PNG)
+
+ although learning requires some centralization, the learned agents can be deployed independently, since each agent acting greedily with respect to its local value ̃Q
 
 ![](imgs/sunehag2017_VDN.PNG)
 
-Agent’s learning algorithm is based on DQN (LSTM for partial observability)
+Agent’s learning algorithm is based on DQN (uses LSTM to overcome partial observability)
 
-their approach can be nicely combined with weight sharing and information channels.
+VDN can be nicely combined with weight sharing and information channels
 
 They have experimented with different approaches including low-level communication channel, high-level communication channel, centralized, individual. They found that the architectures based on value-decomposition perform much better
 
