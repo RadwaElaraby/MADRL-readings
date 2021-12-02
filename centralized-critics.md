@@ -1,0 +1,12 @@
+# MADRL-readings
+
+
+---
+
+## ** Counterfactual multi-agent policy gradients. (Foerster et al., 2018)
+---
+## ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
+---
+## *** Multi-agent actor-critic for mixed cooperative-competitive environments. (Lowe et al., 2017)
+---
+<!-- ## Stabilising experience replay for deep multi-agent reinforcement learning. (Foerster et al. 2017) -->
