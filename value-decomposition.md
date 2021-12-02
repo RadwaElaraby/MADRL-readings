@@ -66,8 +66,8 @@ QMIX transforms the centralised state into the weights of another neural network
 
 QMIX outperforms IQL and VDN, both in terms of absolute performance and learning speed
 
-VDN -> can represent any value function that can be factored into a **linear** monotonic value functions 
-QMIX -> can represent any value function that can be factored into a **non-linear** monotonic combination of the agents’ individual value func-tions 
+- VDN -> can represent any value function that can be factored into a **linear** monotonic value functions 
+- QMIX -> can represent any value function that can be factored into a **non-linear** monotonic combination of the agents’ individual value func-tions 
 
 
 
@@ -93,8 +93,7 @@ using the same model, estimate their utilities for both interactions within thei
 - out-group utility Q<sup>a</sup><sub>O</sub>(τ<sup>a</sup><sub>O</sub>,u<sup>a</sup>;θ<sub>Q</sub>) to account for the potential interactions with entities outside of the agents group
 - both utilities share the same parameters θ<sub>Q</sub>, allowing to leverage imagined experience to improve utility prediction in real scenarios and vice versa
 
-Since we do not know the returns within the imagined sub-groups, we ground our predictions in the observed returns 
-we learn an imagined value function with 2n factors (Q<sup>a</sup><sub>I</sub> and Q<sup>a</sup><sub>O</sub> for each agent) that estimates the same value
+Since we do not know the returns within the imagined sub-groups, we ground our predictions in the observed returns, and we learn an imagined value function with 2n factors (Q<sup>a</sup><sub>I</sub> and Q<sup>a</sup><sub>O</sub> for each agent) that estimates the same value
 
 ![](imgs/Iqbal21_decomposition.PNG)
 
