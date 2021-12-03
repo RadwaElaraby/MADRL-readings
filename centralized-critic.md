@@ -12,17 +12,22 @@ extend three classes of single-agent deep reinforcement learning algorithms:
 consider three training schemes 
 - centralized training and execution
   - maps the joint observation of all agents to a joint action
-  - leads to an exponential growth in the observation and actions spaces with the number of agents 
-    -they factor the joint action into individual components for each agent
+  - issues: exponential growth in the observation and actions spaces with the number of agents 
+  - to address the exponential growht action space, they factor the joint action into individual components for each agent, which reduces the size of the action space from |A|<sup>n</sup> to n|A| in the discrete case
 - concurrent training with decentralized execution
+  - each agent learns its own individual policy
+  -  map an agent’s private observation to an action for that agent
+  -  issues: non-stationary, which can lead to instability + adds additional sample complexity to the problem because agents don't share experience 
 - parameter sharing during training with decentralized execution
+  - allows the policy to be trained with the experiences of all agents simultaneously
+  - control is decentralized but thelearning is not
+  - 
 
 results:
 - policies trained with parameter sharing and an appropriate choice of reward function exhibit cooperative behavior without explicit communication between agents
-- multi-agent extension of TRPO outperforms all other algorithms on benchmark problems with continuous action space
-- A3C has the best performance on the discrete action space benchmark
-
-curriculum learning is vital to scaling reinforcement learning algorithms in complex multi-agent domains (gradually increasing the number of agentsthat need to cooperate)
+- PS-TRPO policies have substantially better performance than PS-DDPG and PS-A3C in continuous action space
+- PS-A3C is able to outperform PS-TRPO in the discrete domain
+- curriculum learning is vital to scaling reinforcement learning algorithms in complex multi-agent domains (gradually increasing the number of agentsthat need to cooperate)
 
 
 ---
