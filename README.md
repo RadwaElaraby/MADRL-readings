@@ -4,12 +4,14 @@ General interests: <!--dealing with nonstationary when moving into multi-agent s
 - centralized training decentralized execution (CTDE) approaches
 - learn communication between agents
 
-## Centralized Critics
+## CTDE via Parameter Sharing 
 
 #### Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017) 
 
 - extends single deep learning algorithm into multi-agent settings and evaluate them
 - centralizing training -> parameter sharing
+
+## CTDE via Centralized Critic
 
 #### Counterfactual multi-agent policy gradients. (Foerster et al., 2018) - COMA
 
