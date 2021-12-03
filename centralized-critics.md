@@ -23,7 +23,7 @@ COMA
   - thus, it computes a separate baseline for each agent that relies on the centralised critic to reason about counterfactuals in which only that agent’s action changes
 
 - use of a critic representation that allows efficient evaluation of the baseline
-  - the actions of the other agents, u<sub>t</sub><sup>−a</sup>, are part of the input to the network, which outputs a Q-value for each of agent a’s actions
+  - the actions of the other agents, u<sub>t</sub><sup>−a</sup>, are part of the input to the critic network, which then outputs a Q-value for each of agent a’s actions
   - counterfactual advantage can be calculated efficiently by a single forward pass of the actor and critic for each agent
 
 They also introduced 2 variatns of independent actor-critic (IAC)
