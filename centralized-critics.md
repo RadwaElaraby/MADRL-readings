@@ -24,6 +24,7 @@ COMA
 
 - use of a critic representation that allows efficient evaluation of the baseline
   - the actions of the other agents, u<sub>t</sub><sup>−a</sup>, are part of the input to the network, which outputs a Q-value for each of agent a’s actions
+  - counterfactual advantage can be calculated efficiently by a single forward pass of the actor and critic for each agent
 
 They also introduced 2 variatns of independent actor-critic (IAC)
 - each agent learn independently, with its own actor and critic conditions only on its own action-observation history
