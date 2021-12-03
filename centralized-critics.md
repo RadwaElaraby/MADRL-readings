@@ -34,6 +34,7 @@ They also introduced 2 variatns of independent actor-critic (IAC)
 
 
 COMA can significantly improve performance over other multi-agent actor-critic methods
+
 COMA’s best agents are competitive with state-of-the-art centralised controllers that are given access to full state information and macro-actions
 
 
