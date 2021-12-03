@@ -4,6 +4,8 @@
 ---
 ## ** Counterfactual multi-agent policy gradients. (Foerster et al., 2018) - COMA
 
+![](imgs/foerster17_COMA_architecture.PNG)
+
 COMA 
 - centralisation of the critic
   - the critic is only used during learning, while only the actor is needed during execution
