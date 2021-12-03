@@ -133,9 +133,11 @@ The attention weight α<sub>j</sub> compares the embedding e<sub>j</sub> with e<
 
 where W<sub>q</sub> transforms e<sub>i</sub> into a “query” and W<sub>k</sub> transforms e<sub>j</sub> into a “key”.
 
-It uses multiple attention heads, where each head can focus on a different weighted mixture of agents
+The weights for extracting selectors, keys, and values are shared across all agents, which encourages a common embedding space
 
-their algorithm is very flexible:
+They use multiple attention heads, where each head can focus on a different weighted mixture of agents
+
+The algorithm is very flexible:
 - with any reward setup (applicable to cooperative, competitive, and mixed environment)
 - different action spaces for each agent
 - variance-reducing baseline that only marginalizes the relevant agent’s actions
