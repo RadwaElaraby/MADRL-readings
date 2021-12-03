@@ -103,11 +103,42 @@ vs COMA:
 - learn continuous policies whereas COMA learns discrete policies 
 
 
+--- 
 
+# Actor-Attention-Critic for Multi-Agent Reinforcement Learning (Iqbal et al., 2019)
 
+an actor-critic algorithm that trains decentralized policies in multi-agent settings, using centrally computed critics that share an attention mechanism which selects relevant information for each agent at every timestep.
 
+The main idea is to learn a centralized critic with an attention mechanism. The attention critic is able to dynamically select which agents to attend to at each time point during training, which improves performance in multi-agent domains with complex interactions.
 
+The attention mechanism functions in a manner similar to a differentiable key-value memory model. Each agent queries the other agents for information about their observationsand actions and incorporates that information into the esti-mate of its value function. 
 
+![](imgs/Iqbal19_attention_critic_architecture.PNG)
+
+Q<sup>ψ</sup><sub>i</sub>(o,a)is a function of agent i’s observation and action, as well as other agents’ contributions x
+
+![](imgs/Iqbal19_q_function.PNG)
+
+The contribution from other agents, x<sub>i</sub>, is a weighted sum of each agent’s value, where the value, v<sub>j</sub> is a function of agent j’s embeddings:
+
+![](imgs/Iqbal19_others_contribution_eq.PNG)
+
+where V is a shared linear transformation matrix and h is a non-linear activation function
+
+The attention weight α<sub>j</sub> compares the embedding e<sub>j</sub> with e<sub>i</sub> = g<sub>i</sub>(o<sub>i</sub>, a<sub>i</sub>) and passes the similarity value between these two embeddings into a softmax
+
+![](imgs/Iqbal19_softmax_eq.PNG)
+
+where W<sub>q</sub> transforms e<sub>i</sub> into a “query” and W<sub>k</sub> transforms e<sub>j</sub> into a “key”.
+
+It uses multiple  attention heads, where each head can focus on a different weighted mixture of agents
+
+their algorithm is very flexible:
+- with any reward setup (applicable to cooperative, competitive, and mixed environment)
+- different action spaces for each agent
+- variance-reducing baseline that only marginalizes the relevant agent’s actions
+
+The input space increase linearly with respect to the number of agents, as opposed tothe quadratic increase in a previous approaches
 
 
 
