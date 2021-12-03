@@ -55,7 +55,8 @@
 #### Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018) - ATOC
 
 > enables **dynamic** communication among agents only when necessary
-> when communication is needed, a communication group is formed by selecting at most m (fixed bandwidth) agents from agents' observable field based on proximity, and they are allowed to share information
+> when communication is needed, a communication group is formed by selecting at most m (fixed bandwidth) agents from agent's observable field based on proximity
+> then, the agents within that communication group are allowed to share information for number of timesteps
 
 #### TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
 
