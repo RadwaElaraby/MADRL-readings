@@ -42,6 +42,10 @@ COMA’s best agents are competitive with state-of-the-art centralised controlle
 
 adopt the framework of centralized training with decentralized execution
 
+a general-purpose multi-agent learning algorithm 
+
+applicable not only to cooperative interaction but to competitive or mixed interaction involving both physical and communicative behavior
+
 ![](imgs/lowe17_architecture.PNG)
 
 a simple extension of actor-critic policy gradient methods where the critic is augmented with extra information about the policies of other agents, while the actor only has access to local information. 
@@ -58,8 +62,6 @@ vs COMA:
 - learn continuous policies whereas COMA learns discrete policies 
 
 Additionally, agents can learn approximate models of other agents online and use them in their own policy learning procedure
-
-applicable not only to cooperative interaction but to competitive or mixed interaction involving both physical and communicative behavior
 
 One downside is that the input space of Q grows linearly with the number of agents N. This could be remedied by, for example, having a modular Q function that only considers agents in a certain neighborhood of agiven a gent
 
