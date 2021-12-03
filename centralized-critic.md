@@ -1,4 +1,31 @@
 
+# ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
+
+focus on problems that can be modeled as Dec-POMDPs
+
+extend three classes of single-agent deep reinforcement learning algorithms:
+- temporal-difference learning using Deep Q Networks (DQN)
+- policy gradient using Trust Region Policy Optimization (TRPO)
+- actor-critic using Deep Deterministic Policy Gradients (DDPG) 
+- actor-critic using Asynchronous Advantage Actor Critic (AC3) 
+
+consider three training schemes 
+- centralized training and execution
+  - maps the joint observation of all agents to a joint action
+  - leads to an exponential growth in the observation and actions spaces with the number of agents 
+    -they factor the joint action into individual components for each agent
+- concurrent training with decentralized execution
+- parameter sharing during training with decentralized execution
+
+results:
+- policies trained with parameter sharing and an appropriate choice of reward function exhibit cooperative behavior without explicit communication between agents
+- multi-agent extension of TRPO outperforms all other algorithms on benchmark problems with continuous action space
+- A3C has the best performance on the discrete action space benchmark
+
+curriculum learning is vital to scaling reinforcement learning algorithms in complex multi-agent domains (gradually increasing the number of agentsthat need to cooperate)
+
+
+---
 
 # Counterfactual multi-agent policy gradients. (Foerster et al., 2018) - COMA
 
@@ -34,22 +61,6 @@ They also introduced 2 variatns of independent actor-critic (IAC)
 COMA can significantly improve performance over other multi-agent actor-critic methods
 
 COMA’s best agents are competitive with state-of-the-art centralised controllers that are given access to full state information and macro-actions
-
----
-# ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ---
