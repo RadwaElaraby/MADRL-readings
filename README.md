@@ -41,6 +41,8 @@ General interests
 
 #### Randomized Entity-wise Factorization for Multi-Agent Reinforcement Learning (Iqbal al., 2021)
 
+- incorporate knowledge of shared patterns to accelerate learning in a multi-task setting
+
 ---
 
 ## Learn Communication 
