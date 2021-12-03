@@ -1,6 +1,6 @@
 
 
-# ** Counterfactual multi-agent policy gradients. (Foerster et al., 2018) - COMA
+# Counterfactual multi-agent policy gradients. (Foerster et al., 2018) - COMA
 
 ![](imgs/foerster17_COMA_architecture.PNG)
 
@@ -34,6 +34,21 @@ They also introduced 2 variatns of independent actor-critic (IAC)
 COMA can significantly improve performance over other multi-agent actor-critic methods
 
 COMA’s best agents are competitive with state-of-the-art centralised controllers that are given access to full state information and macro-actions
+
+---
+# ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -69,21 +84,6 @@ One downside is that the input space of Q grows linearly with the number of agen
 vs COMA:
 - learn a centralized critic for each agent (allowing differing reward functions) whereas COMA learns a single centralized critic for all agents 
 - learn continuous policies whereas COMA learns discrete policies 
-
-
----
-# ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
-
-
-
-
-
-
-
-
-
-
-
 
 
 
