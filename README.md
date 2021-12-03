@@ -29,6 +29,7 @@ General interests: <!--dealing with nonstationary when moving into multi-agent s
 - not only learn what to send, but also to whom to address
 - uses a signature-based soft attention mechanism to allow agents choose which agents to address messages to 
 
+---
 
 ## CTDE via Parameter Sharing 
 
