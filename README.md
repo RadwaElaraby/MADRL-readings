@@ -40,7 +40,7 @@
 
 ---
 
-## Communication 
+## Learn Communication 
 
 #### Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016). - RIAL & DIAL
 
