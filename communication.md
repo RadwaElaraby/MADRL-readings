@@ -1,20 +1,20 @@
 # MADRL-readings
 
 ---
-## Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
+# Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
 
 
 ---
-## Fully decentralized multiagent reinforcement learning with networked agents. (Zhang et al. 2018) 
+# Fully decentralized multiagent reinforcement learning with networked agents. (Zhang et al. 2018) 
 
 
 ---
-## Mean field multi-agent reinforcement learning. (Yang et al., 2018).
+# Mean field multi-agent reinforcement learning. (Yang et al., 2018).
 
 
 
 ---
-## Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
+# Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
 
 Goal: 
 - learn a discrete communication signal among agents in a fully cooperative, partially observable settings.
@@ -51,7 +51,7 @@ Centralized training is achieved via:
 ---
 
 
-## Learning multiagent communication with backpropagation. (Sukhbaatar et al., 2016).
+# Learning multiagent communication with backpropagation. (Sukhbaatar et al., 2016).
 
 Goal:
 - coordination between agents in fully cooperative, partially observable settings by learning suitable communication between them
@@ -79,15 +79,15 @@ Description:
 
 ---
 
-## * Multiagent bidirectionally-coordinated nets: Emergence of human-level coordination in learning to play starcraft combat games. (Peng et al., 2017)
+# * Multiagent bidirectionally-coordinated nets: Emergence of human-level coordination in learning to play starcraft combat games. (Peng et al., 2017)
 
 ---
-## Revisiting the master-slave architecture in multi-agent deep reinforcement learning. (Kong et al., 2017),
+# Revisiting the master-slave architecture in multi-agent deep reinforcement learning. (Kong et al., 2017),
 
 
 
 ---
-## ** Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
+# ** Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
 
 Goal: 
 - learn what to communicate and when to communicate (allows agents to block their communication using a gating mechanism)
@@ -126,7 +126,7 @@ Side notes:
 
 ---
 
-## Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
+# Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018)
 
 Goal:
 - enables **dynamic** communication among agents only when necessary because, in real-world applications, communication is usually restricted by bandwidth or range, and it may not be possible to maintain full connectivity among all agents
@@ -152,7 +152,7 @@ Side notes:
 ---
 
 
-## TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
+# TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
 
 Goal: not only learn what to send, but also to whom to address (in cooperative partially-observable settings)
 
@@ -188,7 +188,7 @@ Side notes:
 
 ---
 
-## ** VAIN: Attentional Multi-agent Predictive Modeling (Yedid 2017)
+# ** VAIN: Attentional Multi-agent Predictive Modeling (Yedid 2017)
 
 
 
