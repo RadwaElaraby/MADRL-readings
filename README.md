@@ -3,6 +3,7 @@
 General interests: <!--dealing with nonstationary when moving into multi-agent settings-->
 - learn communication between agents
 - centralized training decentralized execution (CTDE) approaches
+- credit assignment problem
 
 ---
 
@@ -56,7 +57,7 @@ General interests: <!--dealing with nonstationary when moving into multi-agent s
 
 ---
 
-## Value Decomposition (value-based)
+## Credit Assignment via Value Decomposition (value-based)
 
 #### Value-Decomposition Networks For Cooperative Multi-Agent Learning (Sunehag et al., 2017) - VDN
 
