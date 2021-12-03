@@ -115,7 +115,7 @@ The attention mechanism functions in a manner similar to a differentiable key-va
 
 ![](imgs/Iqbal19_attention_critic_architecture.PNG)
 
-Q<sup>ψ</sup><sub>i</sub>(o,a)is a function of agent i’s observation and action, as well as other agents’ contributions x
+The critic Q<sup>ψ</sup><sub>i</sub>(o,a) is a function of agent i’s observation and action, as well as other agents’ contributions x
 
 ![](imgs/Iqbal19_q_eq.PNG)
 
