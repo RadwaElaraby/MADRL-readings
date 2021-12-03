@@ -1,7 +1,7 @@
 # MADRL-readings
 
-General interests
-- centralized training decentralized execution approaches
+General interests: <!--dealing with nonstationary when moving into multi-agent settings-->
+- centralized training decentralized execution (CTDE) approaches
 - learn communication between agents
 
 ## Centralized Critics
