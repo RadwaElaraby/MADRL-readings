@@ -50,7 +50,7 @@
 
 #### Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
 
-> learn what to communicate and when to communicate (block their communication using a gating mechanism)
+> learn what to communicate and when to communicate (allow agents to block their communication using a gating mechanism)
 
 #### Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018) - ATOC
 
