@@ -1,8 +1,3 @@
-# MADRL-readings
-
-
-
-
 
 # Value-Decomposition Networks For Cooperative Multi-Agent Learning (Sunehag et al., 2017)
 
