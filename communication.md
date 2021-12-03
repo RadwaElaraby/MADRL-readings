@@ -1,6 +1,4 @@
-# MADRL-readings
 
----
 # Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
 
 
