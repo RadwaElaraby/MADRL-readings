@@ -117,7 +117,7 @@ The attention mechanism functions in a manner similar to a differentiable key-va
 
 Q<sup>ψ</sup><sub>i</sub>(o,a)is a function of agent i’s observation and action, as well as other agents’ contributions x
 
-![](imgs/Iqbal19_q_function.PNG)
+![](imgs/Iqbal19_q_eq.PNG)
 
 The contribution from other agents, x<sub>i</sub>, is a weighted sum of each agent’s value, where the value, v<sub>j</sub> is a function of agent j’s embeddings:
 
@@ -131,7 +131,7 @@ The attention weight α<sub>j</sub> compares the embedding e<sub>j</sub> with e<
 
 where W<sub>q</sub> transforms e<sub>i</sub> into a “query” and W<sub>k</sub> transforms e<sub>j</sub> into a “key”.
 
-It uses multiple  attention heads, where each head can focus on a different weighted mixture of agents
+It uses multiple attention heads, where each head can focus on a different weighted mixture of agents
 
 their algorithm is very flexible:
 - with any reward setup (applicable to cooperative, competitive, and mixed environment)
