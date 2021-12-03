@@ -115,11 +115,13 @@ The attention mechanism functions in a manner similar to a differentiable key-va
 
 ![](imgs/Iqbal19_attention_critic_architecture.PNG)
 
-The critic Q<sup>ψ</sup><sub>i</sub>(o,a) is a function of agent i’s observation and action, as well as other agents’ contributions x
+The critic Q<sup>ψ</sup><sub>i</sub>(o,a) is a function f of agent i’s observation o and action a, as well as other agents’ contributions x
 
 ![](imgs/Iqbal19_q_eq.PNG)
 
-The contribution from other agents, x<sub>i</sub>, is a weighted sum of each agent’s value, where the value, v<sub>j</sub> is a function of agent j’s embeddings:
+where g<sub>i</sub> is a one-layer embedding function.
+
+The contribution from other agents, x<sub>i</sub>, is a weighted sum of each agent’s value, where the value, v<sub>j</sub> is a function h of agent j’s embeddings:
 
 ![](imgs/Iqbal19_others_contribution_eq.PNG)
 
