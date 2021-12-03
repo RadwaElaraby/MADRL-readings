@@ -32,6 +32,7 @@ They also introduced 2 variatns of independent actor-critic (IAC)
 - the critic in the 1st variant estimates V while it estimates Q in the 2nd variant
 
 
+COMA achieved competitive results compared with state-of-the-art centralised   controllers that get access to the full state.
 
 
 
