@@ -56,9 +56,11 @@ The gradient of the expected return for agent i can be written as
 where Q<sup>π</sup><sub>i</sub>(x,a<sub>1</sub>,...,a<sub>N</sub>) is a centralized action-value function. in the simplest case, x consists of the observations of all agents, but it could also include additional state information
 
 the centralized action-value function Q<sup>π</sup><sub>i</sub> is updated using
+
 ![](imgs/lowe17_q_update.PNG)
 
 To remove the assumption of knowing other agents’ policies, each agent can maintain an approximation to the true policy of each other agent and use them in their own policy learning procedure. 
+
 ![](imgs/lowe17_true_value_using_inferred_policies.PNG)
 
 One downside is that the input space of Q grows linearly with the number of agents N. This could be remedied by, for example, having a modular Q function that only considers agents in a certain neighborhood of agiven a gent
