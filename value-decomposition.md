@@ -4,7 +4,7 @@
 
 
 
-## Value-Decomposition Networks For Cooperative Multi-Agent Learning (Sunehag et al., 2017)
+# Value-Decomposition Networks For Cooperative Multi-Agent Learning (Sunehag et al., 2017)
 
 a system of several learning agents must jointly optimize a single reward signal. The centralised approach fails by learning inefficient policies with only one agent active and the other being “lazy”. In contrast, independent Q-learners cannot distinguish teammates’ exploration from stochasticity in the environment
 
@@ -36,7 +36,7 @@ Notes
 
 ---
 
-## QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning (Rashidet al., 2018)
+# QMIX: Monotonic Value Function Factorisation for Deep Multi-Agent Reinforcement Learning (Rashidet al., 2018)
 
 a value-based method that can train decentralised policies in a centralised end-to-end fash-ion
 
@@ -73,7 +73,7 @@ QMIX outperforms IQL and VDN, both in terms of absolute performance and learning
 
 ---
 
-## Randomized Entity-wise Factorization for Multi-Agent Reinforcement Learning (Iqbal al., 2021)
+# Randomized Entity-wise Factorization for Multi-Agent Reinforcement Learning (Iqbal al., 2021)
 
 Randomized Entity-wise Factorization for Imagined Learning (REFIL): aims to develop a methodology for agents to incorporate knowledge of shared patterns to accelerate learning in a multi-task setting.
 
