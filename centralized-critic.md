@@ -50,6 +50,7 @@ only the local actors are used at execution phase, acting in a decentralized man
 
 The gradient of the expected return for agent i can be written as 
 ![](imgs/lowe17_gradient.PNG)
+
 where Q<sup>π</sup><sub>i</sub>(x,a<sub>1</sub>,...,a<sub>N</sub>) is a centralized action-value function. in the simplest case, x consists of the observations of all agents, but it could also include additional state information
 
 vs COMA:
@@ -62,8 +63,6 @@ applicable not only to cooperative interaction but to competitive or mixed inter
 
 One downside is that the input space of Q grows linearly with the number of agents N. This could be remedied by, for example, having a modular Q function that only considers agents in a certain neighborhood of agiven a gent
 
-
----
 
 ---
 # ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
