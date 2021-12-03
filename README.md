@@ -1,7 +1,10 @@
 # MADRL-readings
 
+General interests
+- centralized training decentralized execution approaches
+- learn communication between agents
 
-## Centralized Training Decentralized Execution
+## Centralized Critics
 
 #### Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017) 
 
