@@ -42,9 +42,7 @@ COMA’s best agents are competitive with state-of-the-art centralised controlle
 
 adopt the framework of centralized training with decentralized execution
 
-a general-purpose multi-agent learning algorithm 
-
-applicable not only to cooperative interaction but to competitive or mixed interaction involving both physical and communicative behavior
+a general-purpose multi-agent learning algorithm, which can be applied not only to cooperative interaction but to competitive or mixed interaction involving both physical and communicative behavior
 
 ![](imgs/lowe17_architecture.PNG)
 
