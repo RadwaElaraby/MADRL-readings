@@ -67,6 +67,10 @@
 
 
 
+---
+---
+---
+
 
 
 # ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
@@ -221,6 +225,9 @@ The input space increase linearly with respect to the number of agents, as oppos
 
 
 
+---
+---
+---
 
 
 
@@ -334,18 +341,8 @@ REFIL can be implemented easily in practice by using masks in attention-based mo
 
 
 
-
-# Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
-
-
 ---
-# Fully decentralized multiagent reinforcement learning with networked agents. (Zhang et al. 2018) 
-
-
 ---
-# Mean field multi-agent reinforcement learning. (Yang et al., 2018).
-
-
 
 ---
 # Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
@@ -523,6 +520,20 @@ Side notes:
 ---
 
 # ** VAIN: Attentional Multi-agent Predictive Modeling (Yedid 2017)
+
+---
+
+# Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
+
+
+---
+# Fully decentralized multiagent reinforcement learning with networked agents. (Zhang et al. 2018) 
+
+
+---
+# Mean field multi-agent reinforcement learning. (Yang et al., 2018).
+
+
 
 
 
