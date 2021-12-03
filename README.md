@@ -1,8 +1,34 @@
 # MADRL-readings
 
 General interests: <!--dealing with nonstationary when moving into multi-agent settings-->
-- centralized training decentralized execution (CTDE) approaches
 - learn communication between agents
+- centralized training decentralized execution (CTDE) approaches
+
+---
+
+## Learn Communication 
+
+#### Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016). - RIAL & DIAL
+
+- learn communication signal among agents in a fully cooperative, partially observable settings.
+
+#### Learning multiagent communication with backpropagation. (Sukhbaatar et al., 2016). - CommNet
+
+#### Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
+
+- learn what to communicate and when to communicate (allow agents to block their communication using a gating mechanism)
+
+#### Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018) - ATOC
+
+- enables **dynamic** communication among agents only when necessary
+- when communication is needed, a communication group is formed by selecting at most m (fixed bandwidth) agents from agent's observable field based on proximity
+- then, the agents within that communication group are allowed to share information for number of timesteps
+
+#### TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
+
+- not only learn what to send, but also to whom to address
+- uses a signature-based soft attention mechanism to allow agents choose which agents to address messages to 
+
 
 ## CTDE via Parameter Sharing 
 
@@ -44,34 +70,6 @@ General interests: <!--dealing with nonstationary when moving into multi-agent s
 #### Randomized Entity-wise Factorization for Multi-Agent Reinforcement Learning (Iqbal al., 2021)
 
 - incorporate knowledge of shared patterns to accelerate learning in a multi-task setting
-
----
-
-## Learn Communication 
-
-#### Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016). - RIAL & DIAL
-
-- learn communication signal among agents in a fully cooperative, partially observable settings.
-
-#### Learning multiagent communication with backpropagation. (Sukhbaatar et al., 2016). - CommNet
-
-#### Learning when to communicate at scale in multiagent cooperative and competitive tasks. (Singh et al., 2018)
-
-- learn what to communicate and when to communicate (allow agents to block their communication using a gating mechanism)
-
-#### Learning attentional communication for multi-agent cooperation. (Jiang & Lu, 2018) - ATOC
-
-- enables **dynamic** communication among agents only when necessary
-- when communication is needed, a communication group is formed by selecting at most m (fixed bandwidth) agents from agent's observable field based on proximity
-- then, the agents within that communication group are allowed to share information for number of timesteps
-
-#### TarMAC: Targeted Multi-Agent Communication (Das et al., 2020)
-
-- not only learn what to send, but also to whom to address
-- uses a signature-based soft attention mechanism to allow agents choose which agents to address messages to 
-
-
-
 
 
 ---
