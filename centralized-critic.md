@@ -1,4 +1,5 @@
 
+
 # ** Counterfactual multi-agent policy gradients. (Foerster et al., 2018) - COMA
 
 ![](imgs/foerster17_COMA_architecture.PNG)
@@ -36,11 +37,56 @@ COMA’s best agents are competitive with state-of-the-art centralised controlle
 
 
 
+---
+# *** Multi-agent actor-critic for mixed cooperative-competitive environments. (Lowe et al., 2017)
 
+adopt the framework of centralized training with decentralized execution
+
+![](imgs/lowe17_architecture.PNG)
+
+a simple extension of actor-critic policy gradient methods where the critic is augmented with extra information about the policies of other agents, while the actor only has access to local information. 
+
+only the local actors are used at execution phase, acting in a decentralized manner
+
+The gradient of the expected return for agent i can be written as 
+![](imgs/lowe17_gradient.PNG)
+where Q<sup>π</sup><sub>i</sub>(x,a<sub>1</sub>,...,a<sub>N</sub>) is a centralized action-value function. in the simplest case, x consists of the observations of all agents, but it could also include additional state information
+
+vs COMA:
+- learn a centralized critic for each agent (allowing differing reward functions) whereas COMA learns a single centralized critic for all agents 
+- learn continuous policies whereas COMA learns discrete policies 
+
+Additionally, agents can learn approximate models of other agents online and use them in their own policy learning procedure
+
+applicable not only to cooperative interaction but to competitive or mixed interaction involving both physical and communicative behavior
+
+One downside is that the input space of Q grows linearly with the number of agents N. This could be remedied by, for example, having a modular Q function that only considers agents in a certain neighborhood of agiven a gent
+
+
+---
 
 ---
 # ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
----
-# *** Multi-agent actor-critic for mixed cooperative-competitive environments. (Lowe et al., 2017)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 <!-- ## Stabilising experience replay for deep multi-agent reinforcement learning. (Foerster et al. 2017) -->
