@@ -1,29 +1,30 @@
 
 # ** Cooperative multi-agent control using deep reinforcement learning. (Gupta et al., 2017)
 
-focus on problems that can be modeled as Dec-POMDPs
+They focus on problems that can be modeled as Dec-POMDPs
 
-extend three classes of single-agent deep reinforcement learning algorithms:
+They extend three classes of single-agent deep reinforcement learning algorithms:
 - temporal-difference learning using Deep Q Networks (DQN)
 - policy gradient using Trust Region Policy Optimization (TRPO)
 - actor-critic using Deep Deterministic Policy Gradients (DDPG) 
 - actor-critic using Asynchronous Advantage Actor Critic (AC3) 
 
-consider three training schemes 
+They consider three training schemes 
 - centralized training and execution
   - maps the joint observation of all agents to a joint action
   - issues: exponential growth in the observation and actions spaces with the number of agents 
   - to address the exponential growht action space, they factor the joint action into individual components for each agent, which reduces the size of the action space from |A|<sup>n</sup> to n|A| in the discrete case
+
 - concurrent training with decentralized execution
   - each agent learns its own individual policy
   -  map an agent’s private observation to an action for that agent
   -  issues: non-stationary, which can lead to instability + adds additional sample complexity to the problem because agents don't share experience 
+
 - parameter sharing during training with decentralized execution
   - allows the policy to be trained with the experiences of all agents simultaneously
-  - control is decentralized but thelearning is not
-  - 
+  - control is decentralized but the learning is not
 
-results:
+Results:
 - policies trained with parameter sharing and an appropriate choice of reward function exhibit cooperative behavior without explicit communication between agents
 - PS-TRPO policies have substantially better performance than PS-DDPG and PS-A3C in continuous action space
 - PS-A3C is able to outperform PS-TRPO in the discrete domain
