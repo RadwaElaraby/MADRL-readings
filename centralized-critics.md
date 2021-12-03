@@ -23,7 +23,7 @@ COMA
   - thus, it computes a separate baseline for each agent that relies on the centralised critic to reason about counterfactuals in which only that agent’s action changes
 
 - use of a critic representation that allows efficient evaluation of the baseline
-
+  - the actions of the other agents, u<sup>−at</sup>, are part of the input to the network
 
 They also introduced 2 variatns of independent actor-critic (IAC)
 - each agent learn independently, with its own actor and critic conditions only on its own action-observation history
