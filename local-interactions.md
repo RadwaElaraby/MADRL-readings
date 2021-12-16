@@ -64,6 +64,8 @@ we augment the individual action-space of each agent with one “pseudo-action�
   - the update of Q<sup>C</sup><sub>k</sub> uses the estimates of Q<sub>k</sub>* because the individual action at the next step will depend on the values in Q<sub>k</sub>* and not on Q<sup>C</sup><sub>k</sub> (there is not a “direct” dependency among entries in Q<sup>C</sup><sub>k</sub>)
   - the values in Q<sup>C</sup><sub>k</sub> only determine the one-step behavior of the COORDINATE action
 
+Since the penalty of miscoordination is bigger than the cost of using the active perception, the agents learn to take this action in the interaction states
+
 Notes: 
 - How does our works differ from previous methods that explore locality of interaction?
   - previous methods rely heavily on assumptions of joint-state and joint-action observability, even if only at a local level. We instead do not assume joint-action observability, but explore joint-state observability whenever possible
@@ -71,7 +73,7 @@ Notes:
   - the situations in which the agents should interact/coordinate are assumed predefined
 - In MGs with N > 2 agents, each agent can only perceive the local state information concerning one other agent
 - the COORDINATE action does not use any joint action information, only joint state information.
-
+- the outcome of this algorithm is strongly dependent on the value of this penalty
 
 
 <!-- 
