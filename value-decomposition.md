@@ -1,4 +1,9 @@
 
+# Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
+
+
+---
+
 # Value-Decomposition Networks For Cooperative Multi-Agent Learning (Sunehag et al., 2017)
 
 a system of several learning agents must jointly optimize a single reward signal. The centralised approach fails by learning inefficient policies with only one agent active and the other being “lazy”. In contrast, independent Q-learners cannot distinguish teammates’ exploration from stochasticity in the environment
@@ -27,6 +32,14 @@ Notes
 - The implicit value function learned by each agent depends only on local observations, 
 - Learns in a centralised fashion at training time, while agents can be deployed individually
 
+
+
+---
+# Fully decentralized multiagent reinforcement learning with networked agents. (Zhang et al. 2018) 
+
+
+---
+# Mean field multi-agent reinforcement learning. (Yang et al., 2018).
 
 
 ---
