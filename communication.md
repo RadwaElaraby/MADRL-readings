@@ -1,17 +1,4 @@
 
-# Deep decentralized multi-task multi-agent rl under partial observability. (Omidshafiei et al., 2017)
-
-
----
-# Fully decentralized multiagent reinforcement learning with networked agents. (Zhang et al. 2018) 
-
-
----
-# Mean field multi-agent reinforcement learning. (Yang et al., 2018).
-
-
-
----
 # Learning to communicate with deep multi-agent reinforcement learning.(Foerster et al., 2016).
 
 Goal: 
