@@ -13,7 +13,7 @@
 
 - each robot focuses on learning its own optimal policy and com-pletely disregards the existence of the other robot. 
 - each agent must learn from experience those situations in which coordination is beneficial.
-- augment the action space of each agent with a coordination action COORDINATE that attempts to use information from the other agents (gathered by means of active perception) to decide the correct action
+- augment the action space of each agent with a coordination action COORDINATE that attempts to use information from the other agents (gathered by means of active perception: onboard camera or explicit communication) to decide the correct action
 
 #### Learning multi-agent state space representations (De Hauwere 2010)
 #### Solving Delayed Coordination Problems in MAS (De Hauwere 2011)
