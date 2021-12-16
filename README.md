@@ -1,9 +1,13 @@
 # MADRL-readings
+*Most of the text in this repo is copied from the mentioned papers with minimal adaptations*
+
 
 General interests: <!--dealing with nonstationary when moving into multi-agent settings-->
 - learn communication between agents
 - centralized training decentralized execution (CTDE) approaches
 - credit assignment problem
+
+
 
 ---
 
@@ -546,6 +550,8 @@ Side notes:
 
 
 
+
+----
 
 
 
