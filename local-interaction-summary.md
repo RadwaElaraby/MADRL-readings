@@ -29,9 +29,9 @@
  
 ---
 
-## coordination graphs Approach
+## Coordination graphs Approach
 
-- coordination graphs take advantage of an additive decomposition of the joint reward function to allow the agents to act independently, whenever that does not imply a loss of optimality
+coordination graphs take advantage of an additive decomposition of the joint reward function to allow the agents to act independently, whenever that does not imply a loss of optimality
 
 #### Sparse cooperative Q-learning (Kok and Vlassis 2004)
 
